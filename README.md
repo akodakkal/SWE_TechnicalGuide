@@ -1,7 +1,7 @@
 # Hitchhikers Guide to the Structural Wind Engineering Course
 ## Table of content
 
-[1. Installation Guides](Installation_Guides.html)
+[1. Installation Guides](/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation_Guides.md)
 
 [2. Preprocessing](Preprocessing.html)
 
