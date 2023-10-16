@@ -1,0 +1,14 @@
+{
+    "custom_entries": [
+        "Overview.md",
+        "Kratos_with_Python_3.10.md",
+        "Visual_Studio_Code.md",
+        "GiD.md",
+        "Testing_Kratos_Installation.md",
+        "ParOptBeam.md",
+        "FFMPEG.md",
+        "Paraview.md",
+        "Jupyter_Notebook.md",
+        "Remote_Computing.md"
+    ]
+}
