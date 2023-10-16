@@ -5,11 +5,11 @@
 
 [2. Preprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Preprocessing.md)
 
-[3. Remote Computing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Remote_Computing.html)
+[3. Remote Computing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Remote_Computing.md)
 
-[4. Postprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Postprocessing.html)
+[4. Postprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Postprocessing.md)
 
-[5. ParOptBeam Guide](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/ParOptBeam_Guide.html)
+[5. ParOptBeam Guide](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/ParOptBeam_Guide.md)
 
 
 ## Overview
