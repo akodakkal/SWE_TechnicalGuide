@@ -1,25 +1,18 @@
----
-title: ParOptBeam Guide
-keywords: 
-tags: [ParOptBeam_Guide.md]
-sidebar: kratos_workshops
-summary: 
----
 # ParOptBeam Guide
-ParOptBeam (Parametrical Optimizable Beam) is a useful program from the Chair of Structural Analysis, in which the user can run eigenvalue, static and dynamic analysis of a finite element (FE) beam model. After the simulation is finished, we receive time series of level forces, which we [convert to the ParOptBeam format](Postprocessing.html#3-converting-level-forces-to-paroptbeam){:target="_blank"}. For the project work, we will create an equivalent beam model of the building, and run a dynamic analysis using the level forces from the CFD simulation in Kratos.
+ParOptBeam (Parametrical Optimizable Beam) is a useful program from the Chair of Structural Analysis, in which the user can run eigenvalue, static and dynamic analysis of a finite element (FE) beam model. After the simulation is finished, we receive time series of level forces, which we [convert to the ParOptBeam format](Postprocessing.md#3-converting-level-forces-to-paroptbeam). For the project work, we will create an equivalent beam model of the building, and run a dynamic analysis using the level forces from the CFD simulation in Kratos.
 
 This part of the guide will help you with setting up the model and running the dynamic analysis of the building as well as postprocessing the output .
 
 ___
 ## 1. ParOptBeam Master Structure
-You can [download ParOptBeam under this link](https://github.com/mpentek/ParOptBeam){:target="_blank"}. Click on *Code &rarr; Download zip* to download the master file of ParOptBeam. The structure of the master folder you download is explained in this chapter.
+You can [download ParOptBeam under this link](https://github.com/mpentek/ParOptBeam). Click on *Code &rarr; Download zip* to download the master file of ParOptBeam. The structure of the master folder you download is explained in this chapter.
 
 ### 1.1. Input
 For the analysis to run, the program requires user input. The input required from the user are the **ProjectParameters** and the **Forces**.
 
 - **ProjectParameters**: Under **input &rarr; parameters** you can find three different files with the project parameters. You will also have to create one file for your own building, which will be explained in [chapter 2](#2-setting-up-the-model-project-parameters) of this guide. The parameters consist of the Material, Geometry, Boundary Conditions, Optimization Parameters and types of Analysis (together with the respective output options of analysis).
 
-- **Force**: Under **input &rarr; force &rarr; generic_building/generic_pylon** you can find three different files with with the dynamic forces in an .npy format. For your project you will also have to import your dynamic forces, which will be produced from the [convert_kratos_to_paroptbeam](Postprocessing.html#3-converting-level-forces-to-paroptbeam){:target="_blank"} script. Depending on how many level forces you have, it is advised that dynamic force should be named after the number (i.e. 15 nodes &rarr; dynamic_force_15 nodes). When modelling your beam model, **make sure that the beam has the same amount of nodes as the dynamic force!**
+- **Force**: Under **input &rarr; force &rarr; generic_building/generic_pylon** you can find three different files with with the dynamic forces in an .npy format. For your project you will also have to import your dynamic forces, which will be produced from the [convert_kratos_to_paroptbeam](Postprocessing.md#3-converting-level-forces-to-paroptbeam) script. Depending on how many level forces you have, it is advised that dynamic force should be named after the number (i.e. 15 nodes &rarr; dynamic_force_15 nodes). When modelling your beam model, **make sure that the beam has the same amount of nodes as the dynamic force!**
 
 ### 1.2. Source
 The source folder is interesting for you to see and read, in order to understand the processes going on, however probably not necessary to work with during your project. It contains the different types of analysis definitions, beam elements, structure model and postprocessing as well as preprocessing settings.
@@ -175,7 +168,7 @@ As mentioned, you can run an eigenvalue, static and dynamic analysis in ParOptBe
   - **Skin Model Parameters**: Settings for the visualization of the beam element as a skin model.
 
 #### 2. Eigenvalue Analysis Parameters :
-Here we select for which modes we want to print and/or plot the mode shapes and eigenfrequencies as well as animate, after running the eigenvalue analysis. Pick as many modes as you find reasonable and for which the information is important. For the animation, [installation of FFMPEG](Installation_Guides.html#14-ffmpeg){:target="_blank"} is required.
+Here we select for which modes we want to print and/or plot the mode shapes and eigenfrequencies as well as animate, after running the eigenvalue analysis. Pick as many modes as you find reasonable and for which the information is important. For the animation, [installation of FFMPEG](Installation_Guides.md#14-ffmpeg) is required.
 
 #### 3.  Dynamic Analysis Parameters:
  - **Time**: Pick the start, end and time step of simulation according to the CFD Simulation.
@@ -217,7 +210,7 @@ ___
 ### 3. Postprocessing
 After the parameters have been defined, update your run file, in order to call the ProjectParameters.json file of your building. After running the analysis, a new output folder for your project will be written, containing .dat files, animations, and an analysis pdf report.
 
-If you chose "plot" for some of the analysis results, then the results will be plotted in the analysis report. However, it is suggested to still create some scripts (similar to [Postprocessing: Ascii output](Postprocessing.html#2-point-and-line-ascii-data){:target="_blank"}), to add additional plots/results which might be valuable for the project. Some interesting results are (pick relevant dofs!):
+If you chose "plot" for some of the analysis results, then the results will be plotted in the analysis report. However, it is suggested to still create some scripts (similar to [Postprocessing: Ascii output](Postprocessing.md#2-point-and-line-ascii-data)), to add additional plots/results which might be valuable for the project. Some interesting results are (pick relevant dofs!):
 
 - Plot of time series of base reactions (with maximum value noted).
 - Plot of time series of displacements at the top of the building (with maximum value noted).
