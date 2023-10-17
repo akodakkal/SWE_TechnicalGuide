@@ -1,15 +1,8 @@
----
-title: Remote Computing
-keywords: 
-tags: [Remote_Computing.md]
-sidebar: kratos_workshops
-summary: 
----
 # Remote Computing
 Before continuing further with the remote computing, make sure the following has been done:
-- Have the necessary tools for Remote Computing installed ([eduVPN](Installation_Guides.html#41-vpn){:target="_blank"} and [Git Bash](Installation_Guides.html#42-secure-shell-ssh-client){:target="_blank"}).
+- Have the necessary tools for Remote Computing installed ([eduVPN](Installation_Guides.md#41-vpn) and [Git Bash](Installation_Guides.md#42-secure-shell-ssh-client)).
 - Check if the GiD Model of the building as well as the wind characteristics are correct.
-- Check if the simulation [parameters](Preprocessing.html#3-simulation-parameters){:target="_blank"} and [processes](Preprocessing.html#2-processes){:target="_blank"} of the ProjectParametersCustom.json and MainKratosCustom.py are adjusted.
+- Check if the simulation [parameters](Preprocessing.md#3-simulation-parameters) and [processes](Preprocessing.md#2-processes) of the ProjectParametersCustom.json and MainKratosCustom.py are adjusted.
 - Test if the run begins (3-5 time steps, (with all possible necessary output turned on and additional processes)).
 
 Now you are prepared for the full simulation on the chairs cluster.
@@ -125,6 +118,6 @@ $ qsub -pe impi_tight_fu <num-of-cores> -V q_run.sh
 $ tail -n <number-of-lines-to-print> <output-file-name>
 ```   
 
-When the simulation ends, the nodes should be liberated automatically. You can then [copy the results back to your computer](#3-transfer-files), the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.html){:target="_blank"}.
+When the simulation ends, the nodes should be liberated automatically. You can then [copy the results back to your computer](#3-transfer-files), the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
 
 
