@@ -1,18 +1,11 @@
----
-title: Visual Studio Code
-keywords: 
-tags: [Visual_Studio_Code.md]
-sidebar: kratos_workshops
-summary: 
----
 # Visual Studio Code
 Visual Studio Code is a helpful IDE and code editor. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes (such as C++, C#, Java, Python, PHP, Go, .NET). 
 
 ## 1. Download and Install Visual Studio Code
-You can download VSCode in the Microsoft Store if you're using Windows. Alternatively, you can download it on [their website here](https://code.visualstudio.com/Download){:target="_blank"}. Choose according to your operating system: 
+You can download VSCode in the Microsoft Store if you're using Windows. Alternatively, you can download it on [their website here](https://code.visualstudio.com/Download). Choose according to your operating system: 
 ![python_ms_store](../../../../../images/WindEngineering/VSCode_Download.png)
 
-Here are some [helpful videos to get started](https://code.visualstudio.com/docs/getstarted/introvideos){:target="_blank"}  using Visual Studio Code.
+Here are some [helpful videos to get started](https://code.visualstudio.com/docs/getstarted/introvideos)  using Visual Studio Code.
 
 ## 2. Add Python Path to Visual Studio Code
 Make sure to **add Python to your path** if not already available in visual studio code integrated terminal. For Windows, the process will be as the following:
