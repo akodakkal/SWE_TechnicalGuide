@@ -1,10 +1,3 @@
----
-title: Jupyter Notebook
-keywords: 
-tags: [Jupyter_Notebook.md]
-sidebar: kratos_workshops
-summary: 
----
 # Jupyter Notebook
 Jupyter Notebook is a web-based interactive computing platform. Its biggest advantage is its interactive block output, making it easy for the user to understand certain processes in the code easier. 
 
@@ -46,4 +39,4 @@ For more keyboard shortcuts, go to **Help &rarr; Keyboard Shortcuts**
 
 ## 5. Using Jupyter in the browser
 
-Alternatively, you can [open Jupyter in the browser](https://jupyter.org/try-jupyter/lab?path=notebooks%2FIntro.ipynb){:target="_blank"} without having to install the application. Using the web app, you can upload your Jupyter Notebooks (.ipynb files) and then view, edit and run your scripts via the browser. 
+Alternatively, you can [open Jupyter in the browser](https://jupyter.org/try-jupyter/lab?path=notebooks%2FIntro.ipynb) without having to install the application. Using the web app, you can upload your Jupyter Notebooks (.ipynb files) and then view, edit and run your scripts via the browser. 
