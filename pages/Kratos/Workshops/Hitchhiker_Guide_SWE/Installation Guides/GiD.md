@@ -1,16 +1,9 @@
----
-title: GiD and Kratos Problem Type Installation
-keywords: 
-tags: [GiD.md]
-sidebar: kratos_workshops
-summary: 
----
 # GiD and Kratos Problem Type
 GiD and the Kratos problem type for GiD will be used during the project work for the CFD simulation of the structure. GiD supports the geometrical modelling of the structure, meshing, boundary conditions, system properties, etc. Kratos is used as a solver, from which we receive our results. It is a multi-physics simulation code. Aside from CFD, GiD + Kratos might also be used for other purposes, such as Structural/Dynamic Analysis, Fluid-Structure-Interaction etc. Kratos problem type in GiD add some features to support Kratos in GiD, which will generate the input for the solver.
 
 ## Installation
 ### 1. Install GiD:
-[Download GiD at their website](https://www.gidsimulation.com/gid-for-science/downloads/){:target="_blank"}, choose your operating system and download *“GiD 16.1.2d 64 bits"*. Then click on downloaded the executable to install it.
+[Download GiD at their website](https://www.gidsimulation.com/gid-for-science/downloads/), choose your operating system and download *“GiD 16.1.2d 64 bits"*. Then click on downloaded the executable to install it.
 
 ![GiD_Download](../../../../../images/WindEngineering/GiD_Download.png)
 
@@ -24,4 +17,4 @@ Open GiD and click on `“Data/Problem Type/Internet retrieve”`. Then select K
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve_2.png)
 
 
-Follow [this example](../Testing_Kratos_Installation.html){:target="_blank"} to see whether you have properly installed GiD and Kratos
+Follow [this example](../Testing_Kratos_Installation.html) to see whether you have properly installed GiD and Kratos
