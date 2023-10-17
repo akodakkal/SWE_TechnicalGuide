@@ -1,10 +1,3 @@
----
-title: Preprocessing
-keywords: 
-tags: [Preprocessing.md]
-sidebar: kratos_workshops
-summary: 
----
 # Preprocessing
 This section of the guide outlines the most important procedures necessary to prepare for running the simulation. The preprocessing stage involves the modelling of the  case study using GiD, followed by defining specific processes required to extract important outputs from the simulation. This guide serves to ensure proper configuration and preparation prior to the simulation.
 
@@ -246,7 +239,7 @@ You can change the file naming convention and its directory in the `"file_name"`
 - `<time>` will change depending on the simulation time that is currently printed by the process. 
 - `<step>` will change depending on the time step that is currently printed by the process. You can use this as an alternative, but using `<time>` is of course more natural.
 
-To use the output of this process, follow the Hitchhiker guide in [postprocessing with paraview](Postprocessing.html#1-postprocessing-in-paraview){:target="_blank"}.
+To use the output of this process, follow the Hitchhiker guide in [postprocessing with paraview](Postprocessing.md#1-postprocessing-in-paraview).
 
 ```json
 {
