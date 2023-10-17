@@ -1,10 +1,3 @@
----
-title: Running an example with Kratos Multiphysics
-keywords: 
-tags: [Testing_Kratos_Installation.md]
-sidebar: kratos_workshops
-summary: 
----
 # Running an example with Kratos Multiphysics
 Here we will give an example on how to run Kratos with GiD. 
 ## Model Preparation
