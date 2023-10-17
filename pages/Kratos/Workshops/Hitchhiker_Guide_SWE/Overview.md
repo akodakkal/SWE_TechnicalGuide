@@ -1,22 +1,15 @@
----
-title: Overview
-keywords: 
-tags: [Overview.md]
-sidebar: kratos_workshops
-summary: 
----
 # Hitchhikers Guide to the Structural Wind Engineering Course
 ## Table of content
 
-[1. Installation Guides](Installation_Guides.html)
+[1. Installation Guides](Installation_Guides.md)
 
-[2. Preprocessing](Preprocessing.html)
+[2. Preprocessing](Preprocessing.md)
 
-[3. Remote Computing](Remote_Computing.html)
+[3. Remote Computing](Remote_Computing.md)
 
-[4. Postprocessing](Postprocessing.html)
+[4. Postprocessing](Postprocessing.md)
 
-[5. ParOptBeam Guide](ParOptBeam_Guide.html)
+[5. ParOptBeam Guide](ParOptBeam_Guide.md)
 
 
 ## Overview
