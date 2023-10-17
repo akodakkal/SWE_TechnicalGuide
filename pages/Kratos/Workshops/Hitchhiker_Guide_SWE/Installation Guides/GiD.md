@@ -17,4 +17,4 @@ Open GiD and click on `“Data/Problem Type/Internet retrieve”`. Then select K
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve_2.png)
 
 
-Follow [this example](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation Guides/Testing_Kratos_Installation.md) to see whether you have properly installed GiD and Kratos
+Follow [this example](Testing_Kratos_Installation.md) to see whether you have properly installed GiD and Kratos
