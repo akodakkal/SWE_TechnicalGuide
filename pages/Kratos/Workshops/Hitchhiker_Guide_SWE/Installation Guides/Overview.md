@@ -2,12 +2,12 @@ The following part of the guide will show you all the necessary tools to be prep
 
 It is important to note that, given the annual organization of the Structural Wind Engineering (SWE) course, the mandatory program versions may be subject to modification. As such, participants will be clarified regarding the specific versions required during the course.
 
-1. [Python and Kratos installation](Kratos_with_Python_3.10.html) 
-2. [Visual Studio Code installation](Visual_Studio_Code.html) 
-3. [GiD and Kratos problem type installation](GiD.html) 
-4. [Running an example with Kratos Multiphysics](Testing_Kratos_Installation.html) 
-5. [Paraview installation](Paraview.html) 
-6. [Installing and running ParOptBeam](ParOptBeam.html) 
-7. [FFMPEG installation](FFMPEG.html) 
-8. [Jupyter Notebook installation](Jupyter_Notebook.html) 
-9. [Remote computing and its dependencies](Remote_Computing.html) 
+1. [Python and Kratos installation](Kratos_with_Python_3.10.md) 
+2. [Visual Studio Code installation](Visual_Studio_Code.md) 
+3. [GiD and Kratos problem type installation](GiD.md) 
+4. [Running an example with Kratos Multiphysics](Testing_Kratos_Installation.md) 
+5. [Paraview installation](Paraview.md) 
+6. [Installing and running ParOptBeam](ParOptBeam.md) 
+7. [FFMPEG installation](FFMPEG.md) 
+8. [Jupyter Notebook installation](Jupyter_Notebook.md) 
+9. [Remote computing and its dependencies](Remote_Computing.md) 
