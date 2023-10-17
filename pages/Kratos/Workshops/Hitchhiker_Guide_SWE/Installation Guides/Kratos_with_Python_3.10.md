@@ -1,11 +1,3 @@
----
-title: Kratos with Python 3.10
-keywords: 
-tags: [Kratos_with_Python_3.10.md]
-sidebar: kratos_workshops
-summary: 
----
-
 # Python and Kratos Installation
 Most of the tools necessary for the course and project require to use python. The version necessary for the course is **Python 3.10**. We recommend installing it through the Microsoft Store, which will be explained in the following guide. Alternatively you can use Anaconda, although we prefer the following way for simplicity.
 
