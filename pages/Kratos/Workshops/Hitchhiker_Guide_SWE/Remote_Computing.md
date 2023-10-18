@@ -1,6 +1,6 @@
 # Remote Computing
 Before continuing further with the remote computing, make sure the following has been done:
-- Have the necessary tools for Remote Computing installed ([eduVPN](Installation_Guides.md#41-vpn) and [Git Bash](Installation_Guides.md#42-secure-shell-ssh-client)).
+- Have the necessary tools for Remote Computing installed ([eduVPN](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Remote_Computing.md#vpn) and [Git Bash](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Remote_Computing.md#secure-shell-ssh-client)).
 - Check if the GiD Model of the building as well as the wind characteristics are correct.
 - Check if the simulation [parameters](Preprocessing.md#3-simulation-parameters) and [processes](Preprocessing.md#2-processes) of the ProjectParametersCustom.json and MainKratosCustom.py are adjusted.
 - Test if the run begins (3-5 time steps, (with all possible necessary output turned on and additional processes)).
