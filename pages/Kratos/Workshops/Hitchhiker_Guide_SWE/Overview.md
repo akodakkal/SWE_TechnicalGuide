@@ -1,7 +1,7 @@
 # Hitchhikers Guide to the Structural Wind Engineering Course
 ## Table of content
 
-[1. Installation Guides](Installation_Guides.md)
+[1. Installation Guides](Installation%20Guides)
 
 [2. Preprocessing](Preprocessing.md)
 
