@@ -1,10 +1,3 @@
----
-title: Installation Guides
-keywords: 
-tags: [Installation_Guides.md]
-sidebar: kratos_workshops
-summary: 
----
 # Installation Guides
 The following part of the guide will show you all the necessary tools to be prepared for the Structural Wind Engineering (SWE) course and the project work. The guide contains the necessary steps for the installation of the tools and a couple of tips to get started. It is advised to go through all the installation steps, without neglecting any parts, in order to avoid potential errors when using the tools during the course.
 
@@ -29,7 +22,7 @@ ___
 
 An efficient way to install Python together with all its modules is installing the latest **Anaconda package** (Anaconda 22.10), as it comes with some necessary modules and a web application of **Jupyter Notebook**. Visual Studio Code can also be installed together with Anaconda. 
 
-Anaconda is available for [download under this page](https://www.anaconda.com/distribution/){:target="_blank"}. It is available for Windows, Linux, Mac OS. You can choose the Operating System of your choice by clicking on its respective symbol.
+Anaconda is available for [download under this page](https://www.anaconda.com/download/). It is available for Windows, Linux, Mac OS. You can choose the Operating System of your choice by clicking on its respective symbol.
 
 Choose the Python 3.10 version with 64-bit, if possible. After the download is finished, run the .exe file and go through each step of the setup. Typically, your install location should be in your "Users" file in the local disk. 
 
@@ -39,15 +32,15 @@ ___
 ### 1.5. More useful links for python (optional)
 
 #### 1. Windows
-- [WinPython](https://winpython.github.io/){:target="_blank"} comes together with Spyder as IDE.
-- [Notepad++](https://notepad-plus-plus.org/){:target="_blank"}, Lightweight text editor for editing text files.
-- [PyCharm](https://www.jetbrains.com/pycharm/){:target="_blank"}, another IDE, just like Spyder or VS Code.
-- [Eclipse](https://www.eclipse.org/){:target="_blank"} together with the [Python extension](http://www.pydev.org/){:target="_blank"}.
+- [WinPython](https://winpython.github.io/) comes together with Spyder as IDE.
+- [Notepad++](https://notepad-plus-plus.org/), Lightweight text editor for editing text files.
+- [PyCharm](https://www.jetbrains.com/pycharm/), another IDE, just like Spyder or VS Code.
+- [Eclipse](https://www.eclipse.org/) together with the [Python extension](http://www.pydev.org/).
 
 #### 2. Linux
 The sources for the installation of Python can be found here:
- - [Python](https://www.python.org/downloads/source/){:target="_blank"}
- - [Sci-Py packages](https://www.scipy.org/install.html){:target="_blank"}
+ - [Python](https://www.python.org/downloads/source/)
+ - [Sci-Py packages](https://www.scipy.org/install.html)
 
 ___
 ## 2. Installation Guide for GiD & Kratos module
@@ -56,7 +49,7 @@ GiD and the Kratos module for GiD will be used during the project work for the C
 ___
 ### 2.1. Download and Install GiD
 
-[Download GiD at their website](https://www.gidsimulation.com/gid-for-science/downloads/){:target="_blank"}. Choose your operating system **(Windows, Linux, Mac OS)**. For Mac, only GiD is available, without the precompiled Kratos problemtype. 
+[Download GiD at their website](https://www.gidsimulation.com/gid-for-science/downloads/). Choose your operating system **(Windows, Linux, Mac OS)**. For Mac, only GiD is available, without the precompiled Kratos problemtype. 
 
 Download the recommended version during the course. The scripts of the course are frequently tested with the newest GiD versions. In this case you are recommended to use GiD 16.1.3.
 
@@ -79,7 +72,7 @@ ___
 You can install Kratos module directly from GiD, by going to **"Menu bar &rarr; Data &rarr; Problemtype &rarr; Internet Retrieve"**. A window will then open. In the offered modules, select **Kratos (9.2.2) &rarr; Retrieve Module**. 
 
 #### 2. Option: Install Kratos module from GiD archive files
-You can also install [Kratos module](https://www.gidsimulation.com/downloads/kratos/){:target="_blank"} manually from [GiD archive files.](https://downloads.gidsimulation.com/#gidmodules/){:target="_blank"}. Download the latest version of Kratos (9.2.2) for your respective operating system. The x64 version is recommended as further exercises have been created and tested using this one. After downloading the folder, unzip it and move the **"kratos.gid"** folder into the **“problemtypes“** folder inside the installation directory of GiD (overwriting the existing folder). By default, the installation directory is:
+You can also install [Kratos module](https://www.gidsimulation.com/downloads/kratos/) manually from [GiD archive files.](https://downloads.gidsimulation.com/#gidmodules/). Download the latest version of Kratos (9.2.2) for your respective operating system. The x64 version is recommended as further exercises have been created and tested using this one. After downloading the folder, unzip it and move the **"kratos.gid"** folder into the **“problemtypes“** folder inside the installation directory of GiD (overwriting the existing folder). By default, the installation directory is:
 
 ```C:\Program Files\GiD\GiD 16.1.3\problemtypes```
 
