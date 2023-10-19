@@ -13,7 +13,13 @@ You can check whether Python has been successfully installed by using  “python
 Use the `exit()` command to exit from the Python interpreter.
 
 ## **2. Enable the “long paths” handling**
-Run a PowerShell window as administrator and run the following two lines of code:
+Run a PowerShell window as administrator 
+
+```console
+Start-Process powershell -Verb runAs
+```
+
+and run the following two lines of code:
 
 ```console
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"
