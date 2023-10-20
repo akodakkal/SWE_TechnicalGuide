@@ -12,7 +12,17 @@ You can check whether Python has been successfully installed by using  “python
 
 Use the `exit()` command to exit from the Python interpreter.
 
-## **2. Enable the “long paths” handling**
+
+## **2. Python Packages Installation**
+Install following Python packages using the commands below:
+
+```console
+python3.10 -m pip install scipy
+python3.10 -m pip install matplotlib=3.5.3
+python3.10 -m pip install ffmpeg
+```
+
+## **3. Enable the “long paths” handling**
 Run a PowerShell window as administrator 
 
 ```console
@@ -31,18 +41,9 @@ You should get the following output:
 
 ![long_paths_handling](../../../../../images/WindEngineering/long_paths_handling.png)
 
-## **3. Kratos Multiphysics Installation**
+## **4. Kratos Multiphysics Installation**
 Kratos is installed as a Python package. It is important to install version 9.2.0. For that, you can run the following command:
 
 ```console
 python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosMultiphysics-all==9.2.0
-```
-
-## **4. Python Packages Installation**
-Install following Python packages using the commands below:
-
-```console
-python3.10 -m pip install scipy
-python3.10 -m pip install matplotlib=3.5.3
-python3.10 -m pip install ffmpeg
 ```
