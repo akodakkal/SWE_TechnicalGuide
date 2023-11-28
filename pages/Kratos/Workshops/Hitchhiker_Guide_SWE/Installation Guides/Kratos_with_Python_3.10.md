@@ -45,5 +45,8 @@ You should get the following output:
 Kratos is installed as a Python package. It is important to install version 9.2.0. For that, you can run the following command:
 
 ```console
-python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosMultiphysics-all==9.2.0
+python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosMultiphysics==9.2.2
+python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosFluidDynamicsApplication==9.2.2
+python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosHDF5Application==9.2.2
+python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosStatisticsApplication==9.2.2
 ```
