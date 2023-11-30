@@ -3,7 +3,7 @@ GiD and the Kratos problem type for GiD will be used during the project work for
 
 ## Installation
 ### 1. Install GiD:
-[Download GiD at their website](https://www.gidsimulation.com/gid-for-science/downloads/), choose your operating system and download *“GiD 16.1.2d 64 bits"*. Then click on downloaded the executable to install it.
+[Download GiD at their website](https://www.gidsimulation.com/gid-for-science/downloads/), choose your operating system and download *“GiD 16.1.7d 64 bits"*. Then click on downloaded the executable to install it.
 
 ![GiD_Download](../../../../../images/WindEngineering/GiD_Download.png)
 
