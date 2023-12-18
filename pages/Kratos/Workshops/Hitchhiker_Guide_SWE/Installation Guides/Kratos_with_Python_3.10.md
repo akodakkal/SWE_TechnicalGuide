@@ -23,7 +23,7 @@ python3.10 -m pip install ffmpeg
 ```
 
 ## **3. Enable the “long paths” handling**
-Run a PowerShell window as administrator 
+Windows-> Run a PowerShell administrator terminal (Windows)
 
 ```console
 Start-Process powershell -Verb runAs
