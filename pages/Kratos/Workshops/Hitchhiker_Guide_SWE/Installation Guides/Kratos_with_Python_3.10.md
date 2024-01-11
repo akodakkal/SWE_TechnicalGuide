@@ -18,7 +18,7 @@ Install following Python packages using the commands below:
 
 ```console
 python3.10 -m pip install scipy
-python3.10 -m pip install matplotlib=3.5.3
+python3.10 -m pip install matplotlib==3.5.3
 python3.10 -m pip install ffmpeg
 ```
 
