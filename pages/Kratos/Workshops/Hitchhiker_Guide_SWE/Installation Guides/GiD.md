@@ -16,5 +16,14 @@ Open GiD and click on `“Data/Problem Type/Internet retrieve”`. Then select K
 
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve_2.png)
 
+In case you face some errors by retrieving Kratos Multiphysics 9.2.0, try again retrieving Kratos Multiphysics 9.4.2 and restart GiD.
+
+If the module you want to find is not in the list there are two possible reasons:
+
+·It is already installed
+
+·It is not compatible with your GiD version. (Please check that your version is GiD 16.1.7d)
+
+In the figure above you can see in the up right part the two possible filters so you can check which is your problem.
 
 Follow [this example](Testing_Kratos_Installation.md) to see whether you have properly installed GiD and Kratos
