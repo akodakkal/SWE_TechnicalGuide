@@ -22,7 +22,7 @@ ___
 ### 1.2. GiD Model
 
 #### 1. Prepare the geometrical model
-Firstly, make sure to place your structure base on (0.0, 0.0, 0.0) and use x – streamwise, z – height, y –spanwise as directions. Afterwards, prepare necessary geometric entities, such as (in hierarchical order) nodes, lines, surfaces, volumes. Working on layers is very helpful. Prepare 2-3 bounding boxes for better mesh sizing control and refinement. 
+Firstly, make sure to place your structure base centered on (0.0, 0.0, 0.0) and use x – streamwise, z – height, y –spanwise as directions. Strongly recommended that the fluid goes in x direction (inlet surface would be at a negative x coordinate and outlet at positive x). Afterwards, prepare necessary geometric entities, such as (in hierarchical order) nodes, lines, surfaces, volumes. Working on layers is very helpful. Prepare 2-3 bounding boxes for better mesh sizing control and refinement. 
 
 Also, some useful troubleshooting commands are the as follows:
 - **Menu bar &rarr; Utilities → Repair model**. This command checks and fixes modelling errors.
