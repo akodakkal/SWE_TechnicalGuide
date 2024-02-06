@@ -192,6 +192,7 @@ Below is an example of the json parameters for the `"compute_global_force_proces
                     "interval"              : [0.0, "End"],
                     "output_file_settings"  : {
                         "output_path"   : "results/ascii_output/forces/level_forces"
+                        "write_buffer_size": 1
                     }
                 }
             }
