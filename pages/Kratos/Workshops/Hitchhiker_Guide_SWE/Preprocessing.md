@@ -88,9 +88,12 @@ For the project work, with the structure base positioned at (0,0,0) and structur
 
 Below is an example of the json parameters for the `"point_output_process"`:
 ```json
+
+
+
 {
-    "processes"        : {
-        "auxiliar_process_list"            : [
+    "output_processes"        : {
+        "ascii_output"            : [
             {
                 "python_module" : "point_output_process",
                 "kratos_module" : "KratosMultiphysics",
@@ -123,8 +126,8 @@ For the project work, we are interested in different line outputs, such as:
 Below is an example of the json parameters for the `"line_output_process"`:
 ```json
 {
-    "processes"        : {
-        "auxiliar_process_list"            : [
+    "output_processes"        : {
+        "ascii_output"            : [
             {
                 "python_module"   : "line_output_process",
                 "kratos_module"   : "KratosMultiphysics",
@@ -207,25 +210,89 @@ Below is an example of the json parameters for the `"cfl_output_process"`:
 ```json
 {
     "processes"        : {
-        "auxiliar_process_list"            : [
-            {
-                "python_module" : "cfl_output_process",
-                "kratos_module" : "KratosMultiphysics.FluidDynamicsApplication",
-                "process_name"  : "CFLOutputProcess",
-                "Parameters"    : {
-                    "model_part_name"       : "FluidModelPart.fluid_computational_model_part",
-                    "write_output_file"     : true,
-                    "print_to_screen"       : true,
-                    "cfl_output_limit"      : 2.5,
-                    "interval"              : [0.0, "End"],
-                    "output_step"           : 1,
-                    "output_file_settings"  : {
-                        "file_name"         : "cfl_results",
-                        "output_path"       : "results/ascii_output/",
-                        "write_buffer_size" : 1
+        "auxiliar_process_list"            : [{
+            "kratos_module": "KratosMultiphysics.StatisticsApplication",
+            "python_module": "spatial_statistics_process",
+            "Parameters": {
+                "model_part_name": "FluidModelPart.fluid_computational_model_part",
+                "computation_processes": [
+                    {
+                        "kratos_module": "KratosMultiphysics.FluidDynamicsApplication",
+                        "python_module": "compute_cfl_process",
+                        "Parameters": {
+                            "model_part_name": "FluidModelPart.fluid_computational_model_part",
+                            "echo_level": 1
+                        }
                     }
-                }  
+                ],
+                "input_variable_settings": [
+                    {
+                        "norm_type": "magnitude",
+                        "container": "element_non_historical",
+                        "variable_names": [
+                            "CFL_NUMBER"
+                        ]
+                    }
+                ],
+                "statistics_methods": [
+                    {
+                        "method_name": "variance"
+                    },{
+                        "method_name": "max"
+                    },{
+                        "method_name": "distribution",
+                        "method_settings": {
+                            "number_of_value_groups": 1,
+                            "min_value": 1.0,
+                            "max_value": 2.5
+                        }
+                    }
+                ],
+                "output_settings": {
+                    "output_control_variable": "STEP",
+                    "output_time_interval": 10, 
+                    "write_kratos_version": true,
+                    "write_time_stamp": true,
+                    "output_value_precision": 2,
+                    "output_value_length": 6,
+                    "output_file_settings": {
+                        "file_name": "cfl_results.dat",
+                        "output_path": "results/ascii_output/",
+                        "write_buffer_size": 1
+                    }
+                }
             }
+        },{
+            "kratos_module": "KratosMultiphysics.StatisticsApplication",
+            "python_module": "temporal_statistics_process",
+            "Parameters": {
+                "model_part_name": "FluidModelPart.fluid_computational_model_part",
+                "input_variable_settings": [
+                    {
+                        "method_name": "variance",
+                        "norm_type": "none",
+                        "container": "nodal_historical_non_historical",
+                        "echo_level": 1,
+                        "method_settings": {
+                            "input_variables": [
+                                "VELOCITY",
+                                "PRESSURE"
+                            ],
+                            "output_mean_variables": [
+                                "VECTOR_3D_MEAN",
+                                "SCALAR_MEAN"
+                            ],
+                            "output_variance_variables": [
+                                "VECTOR_3D_VARIANCE",
+                                "SCALAR_VARIANCE"
+                            ]
+                        }
+                    }
+                ],
+                "statistics_start_point_control_variable_name": "TIME",
+                "statistics_start_point_control_value": 60
+            }
+        }
         ]
     }
 } 
@@ -243,8 +310,8 @@ To use the output of this process, follow the Hitchhiker guide in [postprocessin
 
 ```json
 {
-    "processes"        : {
-        "auxiliar_process_list"            : [
+    "output_processes"        : {
+        "h5_output"            : [
             {
                 "python_module": "single_mesh_temporal_output_process",
                 "kratos_module": "KratosMultiphysics.HDF5Application",
