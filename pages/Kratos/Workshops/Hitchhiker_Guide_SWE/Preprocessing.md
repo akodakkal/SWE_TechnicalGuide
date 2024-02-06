@@ -142,7 +142,8 @@ Below is an example of the json parameters for the `"line_output_process"`:
                     "output_file_settings": {            
                         "file_name"  : "line_output_at_minus3H",
                         "output_path": "results/ascii_output/line/line_output_at_minus3H/",
-                        "write_buffer_size": 1}
+                        "write_buffer_size": 1
+                    }
                 }
             }
         ]
