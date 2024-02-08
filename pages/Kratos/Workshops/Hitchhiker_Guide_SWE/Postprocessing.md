@@ -7,7 +7,7 @@ Paraview can't read h5 files by default. In order to visualize the result, we ne
 
 - Load the default Kratos version at the cluster:
 ```shell
-$ module load kratos/Master
+$ startkratos
 ```
 - Navigate to the folder where you have the h5 files with the "cd" command.
 - Create the ".xdmf" file by running:
