@@ -105,7 +105,7 @@ Below is an example of the json parameters for the `"point_output_process"`:
                     "output_variables"  : ["PRESSURE", "VELOCITY_X", "VELOCITY_Y", "VELOCITY_Z"],
                     "output_file_settings"  : {
                         "file_name"  : "reference_point_output",
-                        "output_path": "results/ascii_output/ref_point_minus2H_H"
+                        "output_path": "results/ascii_output/ref_point_minus2H_H",
                         "write_buffer_size": 1
                     }
                 }
@@ -174,7 +174,7 @@ Below is an example of the json parameters for the `"compute_global_force_proces
                     "z_rotation_angle"      : 15.0,
                     "interval"              : [0.0, "End"],
                     "output_file_settings"  : {
-                        "output_path"   : "results/ascii_output/forces"
+                        "output_path"   : "results/ascii_output/forces",
                         "write_buffer_size": 1
                     }
                 }
@@ -192,7 +192,7 @@ Below is an example of the json parameters for the `"compute_global_force_proces
                     "intervals"             : 20,
                     "interval"              : [0.0, "End"],
                     "output_file_settings"  : {
-                        "output_path"   : "results/ascii_output/forces/level_forces"
+                        "output_path"   : "results/ascii_output/forces/level_forces",
                         "write_buffer_size": 1
                     }
                 }
