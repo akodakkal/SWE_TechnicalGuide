@@ -2,10 +2,24 @@
 Upon finishing the simulation, the results should be processed in order to be comprehensibly displayed in the final report. This part of the guide will help you with the technicalities of the postprocessing.
 
 ___
-## 1. Postprocessing in Paraview
-Paraview can't read h5 files by default. In order to visualize the result, we need to generate an ".xdmf" file. Follow these steps to generate it:
+## 1. Including Cp values to the h5 files
+Add the script "add_cp_to_h5.py" to the directory "results" in your project.
 
 - Load the default Kratos version at the cluster:
+```shell
+$ startkratos
+```
+
+```shell
+$ python3 add_cp_to_h5.py
+```
+
+By doing that, we are able to visualize the values of the Cp later in Paraview.
+
+## 2. Postprocessing in Paraview
+Paraview can't read h5 files by default. In order to visualize the result, we need to generate an ".xdmf" file. Follow these steps to generate it:
+
+- Load the default Kratos version at the cluster if it is not already loaded (it has to be loaded every time we open a new terminal):
 ```shell
 $ startkratos
 ```
@@ -33,7 +47,7 @@ to speed up picture creation for animation.
   - Merge pictures into: GIF with the software of your choice **or/also** any video format with the software of your choice.
 
 ____
-## 2. Point and line ASCII data
+## 3. Point and line ASCII data
 The ["point_output_process"](Preprocessing.md#21-point-output-process) and ["line_output_process"](Preprocessing.md#22-line-output-process) that you have defined in ProjectParametersCustom.json generates an ascii output (.dat files), with time series of respective pressure and velocities. We recommend (and support) you to create your own pythons scripts with numpy and matplotlib to visualize the data. Here's an example of a python script to generate a simple plot of the pressure of a certain point:
 
 ```python
@@ -59,7 +73,7 @@ With Numpy, you also have useful commands, which can help you find mean, maximum
 Other softwares are also available, such as Excel or Matlab, however we recommend and support Python.
 
 ____
-## 3. Converting level forces to ParOptBeam
+## 4. Converting level forces to ParOptBeam
 
 For the level forces, you need to convert them to a format that ParOptBeam understands, using the python script (**convert_kratos_to_paroptbeam.py**) that is available in the sample files we provided you. The script reads the level force file from the respective folder and converts them accordingly. For this, make sure that under `"n_level_files"` in the script, you input the [number of level forces received from the simulation](Preprocessing.md#23-force-output-process). You can also sample the level forces for the ParOptbeam format in more intervals than the current level forces, under `"number_of_sampling_interval_cases"`. Run the script to receive the level force output, which will then serve as an input for the CSD in ParOptBeam.
 
