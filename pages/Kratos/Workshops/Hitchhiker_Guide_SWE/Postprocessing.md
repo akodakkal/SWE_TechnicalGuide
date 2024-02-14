@@ -3,7 +3,7 @@ Upon finishing the simulation, the results should be processed in order to be co
 
 ___
 ## 1. Including Cp values to the h5 files
-Add the script "add_cp_to_h5.py" to the directory "results" in your project.
+Add the script "add_cp_to_h5.py" to the directory "results" in your project. Take a look at the script, you should modify some values according with your simulation parameters.
 
 - Load the default Kratos version at the cluster:
 ```shell
