@@ -24,7 +24,7 @@ As a start, it is useful to get to know a couple of linux commands. The angle br
 | vim | Visualizes a text file. Pressing "I" you enter in "insert mode" to edit it. To exit press "Esc" and the ":w" to save it and ":q" to quit. If the name of the file does not exist it creates a new one. | 
 | mkdir | Creates a directory | 
 | htop | Checks the usage of processors and RAM | 
-| tail - n `<num-lines>` `<file-name>` | Prints in the screen the last <num-lines> rows of a text file. Very useful to check if the simulation is running. | 
+| tail -n `<num-lines>` `<file-name>` | Prints in the screen the last <num-lines> rows of a text file. Very useful to check if the simulation is running. | 
 | sh | Execute an .sh file | 
 
 ___
