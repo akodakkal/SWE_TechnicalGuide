@@ -4,7 +4,7 @@ Most of the tools necessary for the course and project require to use python. Th
 ## **1. Python 3.12 Installation**
 Go to the Microsoft Store and install Python 3.12 on your computer.
 
-![python_ms_store](../../../../../images/WindEngineering/python_ms_store.png)
+![python_3_12_ms_store](../../../../../images/WindEngineering/python_3_12_ms_store.png)
 
 You can check whether Python has been successfully installed by using  “python” command in the command prompt. You should get the following output when you have successfully installed Python:
 
