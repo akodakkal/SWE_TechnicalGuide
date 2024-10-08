@@ -28,12 +28,10 @@ Run a PowerShell administrator terminal (Windows)
 Start-Process powershell -Verb runAs
 ```
 
-and run the following two lines of code:
+and run the following line of code:
 
 ```console
-New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"
-`
--Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
 
 You should get the following output:
