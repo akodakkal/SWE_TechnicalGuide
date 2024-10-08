@@ -16,9 +16,9 @@ Use the `exit()` command to exit from the Python interpreter.
 Install following Python packages using the commands below:
 
 ```console
-python3.10 -m pip install scipy
-python3.10 -m pip install matplotlib==3.5.3
-python3.10 -m pip install ffmpeg
+python3.12 -m pip install scipy
+python3.12 -m pip install matplotlib
+python3.12 -m pip install ffmpeg
 ```
 
 ## **3. Enable the “long paths” handling**
