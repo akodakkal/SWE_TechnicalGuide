@@ -7,7 +7,6 @@ Go to the Microsoft Store and install Python 3.12 on your computer.
 ![python_3_12_ms_store](../../../../../images/WindEngineering/python_3_12_ms_store.PNG)
 
 You can check whether Python has been successfully installed by using  “python” command in the command prompt. You should get the following output when you have successfully installed Python:
-
 ![python_3_12_output](../../../../../images/WindEngineering/python_3_12_output.PNG)
 
 Use the `exit()` command to exit from the Python interpreter.
