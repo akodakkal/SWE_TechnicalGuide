@@ -4,7 +4,7 @@ FFmpeg is a multimedia framework that can be used for various operations in nume
 ## Download and Install FFMPEG
 FFmpeg is available for [download here](https://www.ffmpeg.org/download.html).
 
-![GiD_Kratos_retrieve](../../../../../images/WindEngineering/FFMPEG.png)
+![GiD_Kratos_retrieve](../../../../../images/WindEngineering/FFMPEG.PNG)
 
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/FFMPEG2.png)
 
