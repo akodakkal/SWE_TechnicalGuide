@@ -1,8 +1,8 @@
 # Python and Kratos Installation
-Most of the tools necessary for the course and project require to use python. The version necessary for the course is **Python 3.12**. We recommend installing it through the Microsoft Store, which will be explained in the following guide. Alternatively you can use Anaconda, although we prefer the following way for simplicity.
+Most of the tools necessary for the course and project require to use python. The version necessary for the course is **Python 3.12**. We recommend installing it through the Python Store, which will be explained in the following guide. Alternatively you can use Anaconda, although we prefer the following way for simplicity.
 
 ## **1. Python 3.12 Installation**
-Go to the Microsoft Store and install Python 3.12 on your computer.
+Go to the Python Store and install Python 3.12 on your computer.
 
 ![python_3_12_ms_store](../../../../../images/WindEngineering/python_3_12_ms_store.PNG)
 
