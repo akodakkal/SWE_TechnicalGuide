@@ -41,11 +41,11 @@ You should get the following output:
 ![long_paths_handling](../../../../../images/WindEngineering/long_paths_handling.png)
 
 ## **4. Kratos Multiphysics Installation**
-Kratos is installed as a Python package. It is important to install version 9.2.0. For that, you can run the following command:
+Kratos is installed as a Python package. It is important to install version 9.5.1. For that, you can run the following command:
 
 ```console
-python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosMultiphysics==9.2.2
-python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosFluidDynamicsApplication==9.2.2
-python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosHDF5Application==9.2.2
-python3.10 -m pip install --upgrade --force-reinstall --no-cache-dir KratosStatisticsApplication==9.2.2
+python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosMultiphysics==9.5.1
+python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosFluidDynamicsApplication==9.5.1
+python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosHDF5Application==9.5.1
+python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosStatisticsApplication==9.5.1
 ```
