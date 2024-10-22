@@ -15,7 +15,7 @@ You should see the following output in the terminal:
 ![CloneOutput](../../../../../images/WindEngineering/CloneOutput.png)
 
 ## 3. Test ParOptBeam
-Open the folder where you have cloned the repositories in Visual Studio Code. There, you will find two files (“run_generic_models.py” and “run_generic_models_from_python.py”). You can whether everything works correctly by opening a terminal in VS Code and running them with the following command:
+Open the folder where you have cloned the repositories in Visual Studio Code. There, you will find two files (“run_generic_models.py” and “run_generic_models_from_python.py”). You can check whether everything works correctly by opening a terminal in VS Code and running them with the following command:
 ```shell
 $ python run_generic_models.py
 ```
