@@ -31,9 +31,7 @@ Start-Process powershell -Verb runAs
 and run the following two lines of code:
 
 ```console
-New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"
-'
--Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
 
 You should get the following output:
