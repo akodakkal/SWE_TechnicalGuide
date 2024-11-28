@@ -14,7 +14,7 @@ Open GiD and click on `“Data/Problem Type/Internet retrieve”`. Then select K
 
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve.png)
 
-![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve_2.PNG)
+![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve_2.png)
 
 
 If the module you want to find is not in the list there are two possible reasons:
