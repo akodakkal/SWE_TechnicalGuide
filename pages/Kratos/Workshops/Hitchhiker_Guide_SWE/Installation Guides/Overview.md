@@ -2,7 +2,7 @@ The following part of the guide will show you all the necessary tools to be prep
 
 It is important to note that, given the annual organization of the Structural Wind Engineering (SWE) course, the mandatory program versions may be subject to modification. As such, participants will be clarified regarding the specific versions required during the course.
 
-1. [Python and Kratos installation](Kratos_with_Python_3.10.md) 
+1. [Python and Kratos installation](Kratos_with_Python.md) 
 2. [Visual Studio Code installation](Visual_Studio_Code.md) 
 3. [Jupyter Notebook installation](Jupyter_Notebook.md) 
 4. [FFMPEG installation](FFMPEG.md) 
