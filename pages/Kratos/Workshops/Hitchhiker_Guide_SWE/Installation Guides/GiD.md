@@ -10,19 +10,19 @@ GiD and the Kratos problem type for GiD will be used during the project work for
 In order to use GiD, you will need to activate a professional license, as the free license is limited. You will be provided with access to this license during the course. After registering, open GiD and go to **" Help &rarr; Register GiD &rarr; Named user &rarr; sign in"**. To sign in, put your TUM email adress and password you used during registration.
 
 ### 2. Install Kratos Problem Type: 
-Open GiD and click on `“Data/Problem Type/Internet retrieve”`. Then select Kratos Multiphysics 9.2.0 and click on “Retrieve module”.
+Open GiD and click on `“Data/Problem Type/Internet retrieve”`. Then select Kratos Multiphysics 9.5.1 and click on “Retrieve module”.
 
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve.png)
 
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/GiD_Kratos_retrieve_2.png)
 
-In case you face some errors by retrieving Kratos Multiphysics 9.2.0, try again retrieving Kratos Multiphysics 9.4.2 and restart GiD.
+In case you face some errors by retrieving Kratos Multiphysics 9.2.0, try again retrieving Kratos Multiphysics 9.5.1 and restart GiD.
 
 If the module you want to find is not in the list there are two possible reasons:
 
 ·It is already installed
 
-·It is not compatible with your GiD version. (Please check that your version is GiD 16.1.7d)
+·It is not compatible with your GiD version. (Please check that your version is GiD 17.1.1d)
 
 In the figure above you can see in the up right part the two possible filters so you can check which is your problem.
 
