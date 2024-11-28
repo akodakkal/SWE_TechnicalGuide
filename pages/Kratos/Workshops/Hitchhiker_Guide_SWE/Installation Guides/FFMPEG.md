@@ -11,7 +11,7 @@ FFmpeg is available for [download here](https://www.ffmpeg.org/download.html).
 
 ### 1. For Windows:
 
-Hover your mouse on the Windows symbol. Click on **"Windows builds from gyan.dev"**.
+Hover your mouse on the Windows symbol. Click on **"Windows builds by BtbN"**.
 
 When located in the new website, select **"ffmpeg-git-full.7z"**. Make sure to have a program to extract the contents of ffmpeg. After extracting the content of ffmpeg, rename it to FFmpeg. Save ffmpeg in a directory of your choice, for example under local disk C:\ .
 
