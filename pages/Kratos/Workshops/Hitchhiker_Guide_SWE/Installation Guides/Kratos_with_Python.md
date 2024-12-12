@@ -47,3 +47,7 @@ python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosFlu
 python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosHDF5Application==9.5.1
 python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosStatisticsApplication==9.5.1
 ```
+## **5. H5py**
+'''console 
+python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir h5py
+'''
