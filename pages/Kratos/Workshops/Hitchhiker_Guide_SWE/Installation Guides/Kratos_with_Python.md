@@ -47,7 +47,31 @@ python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosFlu
 python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosHDF5Application==9.5.1
 python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir KratosStatisticsApplication==9.5.1
 ```
-## **5. H5py**
+## **5. Solution to problems with KratosHDF5Application H5py**
+The version 9.5.1 of HDF5 application has a missing dynamic link library (DLL), which needs to be solved manually. If you don't know what a DLL is, don't worry, you can just follow this steps to make the HDF5 application work.
+
+First, we can install an extra Python package which has our missing library using the following command:
+
 ```console 
 python3.12 -m pip install --upgrade --force-reinstall --no-cache-dir h5py
 ```
+
+Then, we need to find where did python install the new package. You can do it by running this command:
+
+```console 
+python3.12 -m pip show h5py
+```
+
+Under "Location:" you can find the path to all python packages. You can open then the "h5py" folder, inside it locate the file "hdf5.dll" and copy it. Then, go back to the path as before and enter this time in the folder "KratosMultiphysics". Go to the folder ".lib" and paste the "hdf5.dll" file there.
+
+Everything is ready to go! you can test it by running a python file with the following lines:
+
+```console 
+import KratosMultiphysics
+import KratosMultiphysics.FluidDynamicsApplication
+import KratosMultiphysics.StatisticsApplication
+import KratosMultiphysics.HDF5Application
+```
+
+
+
