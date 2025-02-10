@@ -44,7 +44,8 @@ The login is done directly through the "ssh" command in the Git Bash terminal:
 $ ssh -oHostKeyAlgorithms=+ssh-dss <user-name>@<IP-address>
 ```
 
-**Note: Some operating systems might have problems connecting via ssh to the cluster, due to the old operating system at the cluster, that is why we use the parameter "-oHostKeyAlgorithms=+ssh-dss".*
+**Note: Some operating systems might have problems connecting via ssh to the cluster, due to the old operating system at the cluster, that is why we use the parameter "-oHostKeyAlgorithms=+ssh-dss". If you face any error using this command try to substitute it by "-oHostKeyAlgorithms=+ssh-rsa"*
+
 
 ___
 ## 3. Transfer files
