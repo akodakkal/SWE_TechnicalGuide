@@ -28,8 +28,8 @@ In this project, GiD will be used for CAD modelling and mesh generation. GiD is 
 
 Since wind engineering is a multiphysics problem, the computational analysis of a building subjected to wind primarily involves Computational Fluid Dynamics (CFD) and Computational Structural Dynamics (CSD). As this project work focuses on one-way coupling, seperate solvers for Fluid and Structural problem are used.
 
- Computational Fluid Dynamic         -    KratosMultiphysics    - Installation guidelines [Installation Guides](Installation%20Guides)
- Computational Structural Dynamics   -    ParOptBeam            - Installation guidelines [Installation Guides](Installation%20Guides)
+ Computational Fluid Dynamic         -    KratosMultiphysics    - [Installation Guides](Installation%20Guides/GiD.md) 
+ Computational Structural Dynamics   -    ParOptBeam            - [Installation Guides](Installation%20Guides)
 
 KratosMultiphysics - KratosMultiphysics is an open-source multiphysics solver developed by CIMNE (International Center for Numerical Methods in Engineering). It includes several applications such as Fluid Dynamics, Structural Mechanics, and Optimization. In this project, the Fluid Mechanics Application of Kratos will be used for CFD simulations. For more information visit https://kratosmultiphysics.github.io/Kratos/ 
 
