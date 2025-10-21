@@ -22,14 +22,15 @@ The Hitchhiker's Guide provides a valuable resource for student groups involved 
 
 # 1. CAD Modelling and Mesh Generation
 
-In this project, GiD will be used for CAD modelling and mesh generation. GiD is a licensed software that will be provided during the course. Installation guidelines [Installation Guides](Installation%20Guides)
+In this project, GiD will be used for CAD modelling and mesh generation. GiD is a licensed software that will be provided during the course. Installation guidelines [Installation Guides](Installation%20Guides/GiD.md)
 
 # 2. Solving
 
 Since wind engineering is a multiphysics problem, the computational analysis of a building subjected to wind primarily involves Computational Fluid Dynamics (CFD) and Computational Structural Dynamics (CSD). As this project work focuses on one-way coupling, seperate solvers for Fluid and Structural problem are used.
 
- Computational Fluid Dynamic         -    KratosMultiphysics    - [Installation Guides](Installation%20Guides/GiD.md) 
- Computational Structural Dynamics   -    ParOptBeam            - [Installation Guides](Installation%20Guides)
+Computational Fluid Dynamic         -    KratosMultiphysics    - [Installation Guides](Installation%20Guides/kratos_with_python.md)  
+Computational Structural Dynamics   -    ParOptBeam            - [Installation Guides](Installation%20Guides/ParOptBeam.md)
+
 
 KratosMultiphysics - KratosMultiphysics is an open-source multiphysics solver developed by CIMNE (International Center for Numerical Methods in Engineering). It includes several applications such as Fluid Dynamics, Structural Mechanics, and Optimization. In this project, the Fluid Mechanics Application of Kratos will be used for CFD simulations. For more information visit https://kratosmultiphysics.github.io/Kratos/ 
 
