@@ -1,14 +1,14 @@
 # GiD Modelling
 This section provides the guidelines for Modelling in GiD and is organized as follows. 
 
-1. Preparation for GiD modelling
+1. Preparation works for modelling in GiD
 2. Modelling in GiD
 3. Outputs from GiD
 
 An example file is available in Moodle, which can be downloaded under chapter *5-Computational Wind Engineering (CWE) → Example simulation of a Highrise with simulation results*. This download link contains the folder *CFD_HighRiseExampleFine*, which shows a prototype of a CFD simulation done in GiD + Kratos. It is very helpful to inspect this file and notice how the processes are implemented there.
 
 
-## 1. Preparation for GiD modelling
+## 1. Preparation works for modelling in GiD
 Before modelling in GiD, it is necessary to gather essential information regarding the case study, which will be discussed below.
 
 ### 1. Wind profile, direction, etc.
@@ -26,23 +26,22 @@ ___
 ### 1. Create geometrical model
 Firstly, make sure to place your structure base centered on (0.0, 0.0, 0.0) and use x – streamwise, z – height, y –spanwise as directions. Strongly recommended that the fluid goes in x positive direction. Always follow hierarchical order of nodes, lines, surfaces, volumes in creating the model to avoid errors. 
 
-1. Based on the building dimensions, create a list of x, y, z coordinates of the building and its bounding box. With this nodes, create nodes in GiD. Go to Geometry - Create - Point. Then in the command line enter the coordinates of the building. 
+1. Based on the building dimensions, create a list of x, y, z coordinates of the building and its bounding box. With this list, create nodes in GiD by selecting Geometry - Create - Point. Then in the command line enter the coordinates of the building. 
 
-2. Using Geometry → Create → Lines, create edges of structure and bounding box by the joining appropriate nodes. 
+2. Select Geometry → Create → Lines, to create edges of structure and bounding box by the joining appropriate nodes. 
 
-3. Using Geometry → Create → Surface, create surfaces of structure and bounding box by selecting appropriate lines. 
-**Note:** 1. Surfaces are always closed. Hence, Only a set of closed lines can form a surface. 
-          2. Don't create surface for building bottom because it doesn't make sense and will produce error in simulation. 
+3. Select Geometry → Create → Surface, to create surfaces of structure and bounding box by selecting appropriate lines.  
+**Note:** 1. Surfaces are always closed. Hence, only a set of closed lines can form a surface.  
+          2. Don't create surface for building bottom as it is not physically meaningful and will produce error in simulation.  
 
-4. Using Geometry → Create → Volume, create volumes of fluid domain(bounding box) by selecting appropriate surfaces. 
+4. Select Geometry → Create → Volume, to create volumes of fluid domain(bounding box) by selecting appropriate surfaces.  
 **Note:** 1. Volumes are always closed. Hence a set of closed surfaces can only produce a volume. If this is not followed, GiD will not raise error but the solution will not converge because we are having a open domain without BC. 
 
-### 2. Working on Layers
-It is advised to Work with layers. Create layers for structure and for each bounding box. 
+### 2. Create Layers
+It is advised to work with layers. Create layers for the structure and for each bounding box.  
+**How to create:** Create layers by selecting "create a new layer". Then by, right click → send to → (Points, Lines, Surfaces, Volumes). Then select the entities that has to be added to the layer.  
 
-**How to create:** Create layers by click on create a new layer and give them appropriate naming. Then, on right clicking on each layers you can add nodes, lines, surfaces and volumes.  
-
-### 3. Create necessary groups 
+### 3. Create groups
 The respective geometric entities should be put into groups and assigned the respective boundary conditions.
 
 Make sure to have the following groups:
@@ -66,7 +65,52 @@ Boundary Conditions:
 | Prescribed velocity field | Inlet |
 | Zero pressure field | Outlet |
 
-### 4. Simulation parameters
+
+### 5. Assign project parameters
+
+Set the problem type by Data → Problem type → Kratos → Fluid → Fluid → 3D. On the left side tab assign the project parameters for the problem. Since GiD has limited user control for project paramters, we will se the basic paramaters 
+
+### 4. Meshing
+
+Note meshing has to done only after 
+
+### 5. Usefull tools
+
+Some of the useful tools and commands in GiD are categorized and given below
+
+Refer to the numbering (numbered in anticlockwise direction) in the figure and corresponding tool use is described. 
+[python_ms_store](../../../../../images/WindEngineering/GiD_User_Interface.png)
+
+1. **Viewing tools**
+    1 - List of views 
+    2 - Zoom in to specific region
+    3 - Automatically zooms to the frame covering the entire model. 
+    4 - Rotate and set the desired 3D view
+    6 - Give information(node id, coordinates, etc) for a single or list of entities(Points, lines, etc). 
+    10 - Rendering
+
+2. **Layer Handling**
+    14 - Enable and disable Layer and Gropus tab
+    13 - Creates new layer 
+    12 - Turn on and off the desired layer. If "Yellow" turned on. 
+    11 - Infromation about layers
+
+3. **Meshing**
+    7 - Turn on and off the mesh view
+    8 - Draws the mesh size data on the model
+    9 - Model and mesh detialls
+
+
+
+
+
+
+
+- **Menu bar &rarr; Utilities → Repair model**. This command checks and fixes modelling errors.
+- **GiD → Geometry → Edit → Collapse → Model**. This deletes unnecessary (and perhaps hidden) lines and nodes. It is helpful especially when importing geometries from programms such as Autocad, Rhino and Sketchup, by exploding or ungrouping the geometry.
+
+
+### 6. Simulation parameters
 After the geometry is modelled and the groups with their respective boundary condition are defined, a proper choice of simulation parameters is important. The **CFD_HighRiseExampleFine**  file is very helpful for reference.
 
 Make sure to have determined and assigned the following:
@@ -77,12 +121,8 @@ Make sure to have determined and assigned the following:
 - Define the velocity profile function. This function will span between the time frame [4T; End(~20T)].
 - Other simulation parameters can be extracted from the **CFD_HighRiseExampleFine** example.
 
-### 5. Run the preliminary (test) simulation 
+### 7. Run the preliminary (test) simulation 
 Before running the full simulation, a good way to determine if everything has been defined correctly is to run the simulation from GiD for 3-5 time steps to make sure it runs. To see if it is running you can check GiD → Calculate → View process info. If the simulation is running for 3-5 time steps, it means that there are no errors in modelling and definition of the simulation of parameters.
-
-Also, some useful troubleshooting commands are the as follows:
-- **Menu bar &rarr; Utilities → Repair model**. This command checks and fixes modelling errors.
-- **GiD → Geometry → Edit → Collapse → Model**. This deletes unnecessary (and perhaps hidden) lines and nodes. It is helpful especially when importing geometries from programms such as Autocad, Rhino and Sketchup, by exploding or ungrouping the geometry.
 
 ___
 ## 1.3. Outputs from GiD
