@@ -73,7 +73,7 @@ Set the problem type by navigating to Data → Problem Type → Kratos → Fluid
 
 Set the analysis type and all other parameters as shown in the tutorial video, except for the following:
 
-4.1.**Time Intervals:**  
+**4.1. Time Intervals:**  
 For this project, the total simulation time must be divided into two parts.  
         - Rampup Time Interval  
         - Run Time Interval  
@@ -82,21 +82,22 @@ For this project, the total simulation time must be divided into two parts.
 
 **Runtime Interval:** After the ramp-up phase, the flow is allowed to stabilize for an additional time period T. Thus, a total of 2T (ramp-up + stabilization) is allocated before data collection begins. Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
 
-                                Total Time Interval = 2T + 2T + 16T = 20T
+Total Time Interval = 2T + 2T + 16T = 20T
 
 **Steps in GiD Interface:** In the GiD interface, right-click on “Time Intervals.” Select “Create New Interval.” Create two separate time intervals corresponding to the ramp-up and run phases. Set the appropriate start and end times for each interval as per the calculated values.
 
-4.2.**Automatic Inlet Velocity:**  
+**4.2. Automatic Inlet Velocity:**  
 Since wind velocity varies with height, it must be defined as a function of height (z). Use the Eurocode corresponding to the project’s terrain category to calculate the wind profile function for your model. During the ramp-up time period, the inlet wind velocity also changes with time (t). Therefore, two separate functions must be defined for the inlet velocity:  
 
-**Ramp-up Interval:** Wind velocity varies with both height (z) and time (t).  
+**Ramp-up Interval:** Wind velocity varies with both height (z) and time (t). 
+
 **Run Interval:** Wind velocity varies only with height (z).  
 
 **Steps in GiD Interface:** Double-click on “Automatic Inlet Velocity.” Check the box “By Function.” Enter the wind velocity profile: For the ramp-up interval, input the function that varies with both z and t. For the run interval, input the function that varies with z only. Assign each function to its corresponding time interval.
 
 **Caution:** Before assigning, test the velocity functions in Excel or Python to ensure they behave as expected.
 
-4.3.**Time Step:**  
+**4.3. Time Step:**  
 The time step (Δt) for the simulation must be determined based on the Courant–Friedrichs–Lewy (CFL) number. The time step should be chosen such that CFL < 1  
 
 CFL = U * dT / dX.  
@@ -159,12 +160,10 @@ After completing the modelling of the structure in GiD, you can go to *Kratos&ra
 
 Although the problem can be directly solved by Kratos in GiD, the main reason for generating only the project files is as follows 
 
-           1. As the simulations demand significant computational power, a remote connection to the cluster of the Chair of Structural Analysis is provided where the simulations are executed.
-           2. GiD provides comparatively limited user control over modeling options and output parameter settings when compared to directly working with the ProjectParameter file. 
+1. As the simulations demand significant computational power, a remote connection to the cluster of the Chair of Structural Analysis is provided where the simulations are executed.
+2. GiD provides comparatively limited user control over modeling options and output parameter settings when compared to directly working with the ProjectParameter file. 
 
-
-The information provided below includes additional data that must be added(with necessary modification for your building) in **ProjectParameters.json** file to extract the necessary details about the building for post processing. In order to have a copy of your original MainKratos and ProjectParameters file, we will create copies of them and name them MainKratosCustom.py and ProjectParametersCustom.json. **Make sure to update the line in MainKratosCustom referring to the project parameters from ProjectParameters &rarr; ProjectParametersCustom.**
-The ProjectParametersCustom.json file will undergo a number of changes in the next steps, therefore it is advised to always refer to how the processes have been applied in the CFD_HighRiseExampleFine example. Also, discuss with project coordinator, different buildings may require additional process inputs.
+The information provided below includes additional data that must be added(with necessary modification for your building) in **ProjectParameters.json** file to extract the necessary details about the building for post processing. In order to have a copy of your original MainKratos and ProjectParameters file, we will create copies of them and name them MainKratosCustom.py and ProjectParametersCustom.json. **Make sure to update the line in MainKratosCustom referring to the project parameters from ProjectParameters &rarr; ProjectParametersCustom.** The ProjectParametersCustom.json file will undergo a number of changes in the next steps, therefore it is advised to always refer to how the processes have been applied in the CFD_HighRiseExampleFine example. Also, discuss with project coordinator, different buildings may require additional process inputs.
 
 The process files can be found in the example. Do not forget to copy the files to your .gid folder.
 
