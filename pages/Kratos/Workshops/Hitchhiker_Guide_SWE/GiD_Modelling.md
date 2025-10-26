@@ -33,18 +33,14 @@ Firstly, make sure to place your structure base centered on (0.0, 0.0, 0.0) and 
 2. Select Geometry → Create → Lines, to create edges of structure and bounding box by the joining appropriate nodes. 
 
 3. Select Geometry → Create → Surface, to create surfaces of structure and bounding box by selecting appropriate lines.  
-**Note:**   
-1. Surfaces are always closed. Hence, only a set of closed lines can form a surface.     
-2. Don't create surface for building bottom as it is not physically meaningful and will produce error in simulation.  
+**Note:** Surfaces are always closed. Hence, only a set of closed lines can form a surface. Don't create surface for building bottom as it is not physically meaningful and will produce error in simulation.  
 
 4. Select Geometry → Create → Volume, to create volumes of fluid domain(bounding box) by selecting appropriate surfaces.  
-**Note:**   
-1. Volumes are always closed. Hence a set of closed surfaces can only produce a volume. If this is not followed, GiD will not raise error but the solution will not converge because we are having a open domain without BC.  
+**Note:** Volumes are always closed. Hence a set of closed surfaces can only produce a volume. If this is not followed, GiD will not raise error but the solution will not converge because we are having a open domain without BC.  
 
 ### 2. Create Layers
 It is advised to work with layers. Create layers for the structure and for each bounding box.  
-**How to create:**   
-Create layers by selecting "create a new layer". Then by, right click → send to → (Points, Lines, Surfaces, Volumes). Then select the entities that has to be added to the layer.   
+**How to create:** Create layers by selecting "create a new layer". Then by, right click → send to → (Points, Lines, Surfaces, Volumes). Then select the entities that has to be added to the layer.   
 
 ### 3. Create groups
 Group the respective geometric entities and assign the corresponding boundary conditions. Refer to the '5 - Computational Wind Engineering' tutorial video for instructions on creating groups. 
@@ -77,33 +73,30 @@ Set the problem type by navigating to Data → Problem Type → Kratos → Fluid
 
 Set the analysis type and all other parameters as shown in the tutorial video, except for the following:
 
-1.**Time Intervals:**  
+4.1.**Time Intervals:**  
 For this project, the total simulation time must be divided into two parts.  
-        - Rampup Time Interval
-        - Run Time Interval
+        - Rampup Time Interval  
+        - Run Time Interval  
     
-Rampup Time Interval : During this phase, the inlet velocity of the domain is increased linearly from 0 to U over a time period 2T, where T = 1/f, f is the vortex shedding frequency. This phase is referred to as the ramp-up period. 
+**Rampup Time Interval:** During this phase, the inlet velocity of the domain is increased linearly from 0 to U over a time period 2T, where T = 1/f, f is the vortex shedding frequency. This phase is referred to as the ramp-up period. 
 
-Runtime Interval: After the ramp-up phase, the flow is allowed to stabilize for an additional time period T. Thus, a total of 2T (ramp-up + stabilization) is allocated before data collection begins. Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
+**Runtime Interval:** After the ramp-up phase, the flow is allowed to stabilize for an additional time period T. Thus, a total of 2T (ramp-up + stabilization) is allocated before data collection begins. Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
 
                                 Total Time Interval = 2T + 2T + 16T = 20T
 
-Steps in GiD Interface:   
-In the GiD interface, right-click on “Time Intervals.” Select “Create New Interval.” Create two separate time intervals corresponding to the ramp-up and run phases. Set the appropriate start and end times for each interval as per the calculated values.
+**Steps in GiD Interface:** In the GiD interface, right-click on “Time Intervals.” Select “Create New Interval.” Create two separate time intervals corresponding to the ramp-up and run phases. Set the appropriate start and end times for each interval as per the calculated values.
 
-2.**Automatic Inlet Velocity:**  
+4.2.**Automatic Inlet Velocity:**  
 Since wind velocity varies with height, it must be defined as a function of height (z). Use the Eurocode corresponding to the project’s terrain category to calculate the wind profile function for your model. During the ramp-up time period, the inlet wind velocity also changes with time (t). Therefore, two separate functions must be defined for the inlet velocity:  
 
-Ramp-up Interval: Wind velocity varies with both height (z) and time (t).  
-Run Interval: Wind velocity varies only with height (z).  
+**Ramp-up Interval:** Wind velocity varies with both height (z) and time (t).  
+**Run Interval:** Wind velocity varies only with height (z).  
 
-Steps in GiD Interface:  
-Double-click on “Automatic Inlet Velocity.” Check the box “By Function.” Enter the wind velocity profile: For the ramp-up interval, input the function that varies with both z and t. For the run interval, input the function that varies with z only. Assign each function to its corresponding time interval.
+**Steps in GiD Interface:** Double-click on “Automatic Inlet Velocity.” Check the box “By Function.” Enter the wind velocity profile: For the ramp-up interval, input the function that varies with both z and t. For the run interval, input the function that varies with z only. Assign each function to its corresponding time interval.
 
-Caution:   
-Before assigning, test the velocity functions in Excel or Python to ensure they behave as expected.
+**Caution:** Before assigning, test the velocity functions in Excel or Python to ensure they behave as expected.
 
-3.**Time Step:**  
+4.3.**Time Step:**  
 The time step (Δt) for the simulation must be determined based on the Courant–Friedrichs–Lewy (CFL) number. The time step should be chosen such that CFL < 1  
 
 CFL = U * dT / dX.  
@@ -115,11 +108,11 @@ Refer to the lecture for explanation on CFL number. Here velocity of the model i
 
 ### 5. Meshing
 
-Mesh Size Calculation:  Take the shortest side of the building and divide it by 10. This gives an approximate minimum mesh size for the building. As you move toward the outer bounding box, multiply the mesh size by 2 at each step.  
+**Mesh Size Calculation:**  Take the shortest side of the building and divide it by 10. This gives an approximate minimum mesh size for the building. As you move toward the outer bounding box, multiply the mesh size by 2 at each step.  
 
-How to assign mesh size:  Refer to the tutorial video for guidance on assigning mesh sizes. Use layers to properly select and assign mesh sizes for specific regions of the model. Generate the mesh only after assigning all necessary project parameters.  
+**How to assign mesh size:**  Refer to the tutorial video for guidance on assigning mesh sizes. Use layers to properly select and assign mesh sizes for specific regions of the model. Generate the mesh only after assigning all necessary project parameters.  
 
-Review Mesh quality: Go to Mesh → Mesh Quality to check the different mesh quality parameters. In the quality criteria, select Minimum Edge to verify the minimum mesh size. With this mesh size, check the CFL number to ensure it is below 1 for simulation stability.
+**Review Mesh quality:** Go to Mesh → Mesh Quality to check the different mesh quality parameters. In the quality criteria, select Minimum Edge to verify the minimum mesh size. With this mesh size, check the CFL number to ensure it is below 1 for simulation stability.
 
 ### 6. Usefull tools
 
