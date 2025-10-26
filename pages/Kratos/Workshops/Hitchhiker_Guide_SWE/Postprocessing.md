@@ -29,16 +29,15 @@ $ python3 add_cp_to_h5.py
 
 Paraview can't read h5 files by default. In order to visualize the result, we need to generate an ".xdmf" file. Follow these steps to generate it:
 
-- Load the default Kratos version at the cluster if it is not already loaded (it has to be loaded every time we open a new terminal):
+1. Load the default Kratos version at the cluster if it is not already loaded (it has to be loaded every time we open a new terminal):
 ```shell
 $ startkratos
 ```
-- Navigate to the folder where you have the h5 files with the "cd" command.
-- Create the ".xdmf" file by running:
+2. Navigate to the folder where you have the h5 files with the "cd" command and create the ".xdmf" file by running:
 ```shell
 $ convertH5toXdmf <name_of_files_until_dash>
 ```
-- An ".xdmf" file will be created. Copy all the h5 files and the xdmf file to your computer to visualize. 
+3. An ".xdmf" file will be created. Copy all the h5 files and the xdmf file to your computer to visualize. 
 
 **Note that the xdmf file only serves as a link between the Paraview and the h5 files. Paraview need both the h5 and xdmf files.* 
 
