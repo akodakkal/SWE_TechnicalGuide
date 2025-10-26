@@ -8,24 +8,24 @@ This section provides the guidelines for Modelling in GiD and is organized as fo
 An example file is available in Moodle, which can be downloaded under chapter *5-Computational Wind Engineering (CWE) → Example simulation of a Highrise with simulation results*. This download link contains the folder *CFD_HighRiseExampleFine*, which shows a prototype of a CFD simulation done in GiD + Kratos. It is very helpful to inspect this file and notice how the processes are implemented there.
 
 
-## 1. Preparation works for modelling in GiD
+## 1 Preparation works for modelling in GiD
 Before modelling in GiD, it is necessary to gather essential information regarding the case study, which will be discussed below.
 
-### 1. Wind profile, direction, etc.
+### 1.1 Wind profile, direction, etc.
 The wind characteristics differ between each case study. Knowing the geographical position of the case study and its surroundings, you can manage to assess the main wind direction considered for the study and its respective velocity profile.
 
-### 2. Geometry of the structure and bounding box
+### 1.2 Geometry of the structure and bounding box
 It is essential to inspect the geometry of the building for the case study, which will then be modelled in GiD. Necessary information, such as height, width, depth, openings or changes of the building geometry should be noted, in order to have an overview of how to model the building later. 
 
-### 3. Sizing of the numerical wind tunnel (CFD domain size)
+### 1.3 Sizing of the numerical wind tunnel (CFD domain size)
 Make sure that your CFD domain size is correct. *CFDGuidelines* from chapter *5- Computational Wind Engineering* shows how to define the size of the domain depending on the case study. For better meshing, it is advised to use 3 to 4 bounding boxes covering the entire domain. The parts close to the structure should have a finer mesh, in comparison to parts away from the structure, where the information received from the simulation is not of such importance.
 
 The calculation of the outermost bounding box (domain) dimensions is provided in the PPT. Now, inner bounding boxes need to be created by progressively dividing the space in half. For example, if the outer box is positioned at 2400 and the structure's outer surface is at 0, then: The 1st inner bounding box should be at 1200. The 2nd inner bounding box should be at 600. And so on, continuing this pattern.  
 
 ___
-## 1.2. Modelling in GiD
+## 2 Modelling in GiD
 
-### 1. Create geometrical model
+### 2.1 Create geometrical model
 Firstly, make sure to place your structure base centered on (0.0, 0.0, 0.0) and use x – streamwise, z – height, y –spanwise as directions. Strongly recommended that the fluid goes in x positive direction. Always follow hierarchical order of nodes, lines, surfaces, volumes in creating the model to avoid errors. 
 
 1. Based on the building dimensions, create a list of x, y, z coordinates of the building and its bounding box. With this list, create nodes in GiD by selecting Geometry - Create - Point. Then in the command line enter the coordinates of the building. 
@@ -38,11 +38,11 @@ Firstly, make sure to place your structure base centered on (0.0, 0.0, 0.0) and 
 4. Select Geometry → Create → Volume, to create volumes of fluid domain(bounding box) by selecting appropriate surfaces.  
 **Note:** Volumes are always closed. Hence a set of closed surfaces can only produce a volume. If this is not followed, GiD will not raise error but the solution will not converge because we are having a open domain without BC.  
 
-### 2. Create Layers
+### 2.2 Create Layers
 It is advised to work with layers. Create layers for the structure and for each bounding box.  
 **How to create:** Create layers by selecting "create a new layer". Then by, right click → send to → (Points, Lines, Surfaces, Volumes). Then select the entities that has to be added to the layer.   
 
-### 3. Create groups
+### 2.3 Create groups
 Group the respective geometric entities and assign the corresponding boundary conditions. Refer to the '5 - Computational Wind Engineering' tutorial video for instructions on creating groups. 
 
 Make sure to have the following groups:
@@ -67,13 +67,13 @@ Boundary Conditions:
 | Zero pressure field | Outlet |
 
 
-### 4. Assign project parameters
+### 2.4 Assign project parameters
 
-Set the problem type by navigating to Data → Problem Type → Kratos → Fluid → Fluid → 3D. In the left-side panel, start assigning the project parameters for the problem. Since GiD offers limited user control over project parameters, only the essential parameters will be set within the GiD interface. Additional project parameter configurations will be handled outside GiD, as explained in Section 1.3 
+Set the problem type by navigating to Data → Problem Type → Kratos → Fluid → Fluid → 3D. In the left-side panel, start assigning the project parameters for the problem. Since GiD offers limited user control over project parameters, only the essential parameters will be set within the GiD interface. Additional project parameter configurations will be handled outside GiD, as explained in Section 3 
 
 Set the analysis type and all other parameters as shown in the tutorial video, except for the following:
 
-**4.1. Time Intervals:**  
+**2.4.1. Time Intervals:**  
 For this project, the total simulation time must be divided into two parts.  
         - Rampup Time Interval  
         - Run Time Interval  
@@ -86,7 +86,7 @@ Total Time Interval = 2T + 2T + 16T = 20T
 
 **Steps in GiD Interface:** In the GiD interface, right-click on “Time Intervals.” Select “Create New Interval.” Create two separate time intervals corresponding to the ramp-up and run phases. Set the appropriate start and end times for each interval as per the calculated values.
 
-**4.2. Automatic Inlet Velocity:**  
+**2.4.2 Automatic Inlet Velocity:**  
 Since wind velocity varies with height, it must be defined as a function of height (z). Use the Eurocode corresponding to the project’s terrain category to calculate the wind profile function for your model. During the ramp-up time period, the inlet wind velocity also changes with time (t). Therefore, two separate functions must be defined for the inlet velocity:  
 
 **Ramp-up Interval:** Wind velocity varies with both height (z) and time (t). 
@@ -97,7 +97,7 @@ Since wind velocity varies with height, it must be defined as a function of heig
 
 **Caution:** Before assigning, test the velocity functions in Excel or Python to ensure they behave as expected.
 
-**4.3. Time Step:**  
+**2.4.3 Time Step:**  
 The time step (Δt) for the simulation must be determined based on the Courant–Friedrichs–Lewy (CFL) number. The time step should be chosen such that CFL < 1  
 
 CFL = U * dT / dX.  
@@ -107,7 +107,7 @@ dX - Minimum mesh size
 
 Refer to the lecture for explanation on CFL number. Here velocity of the model is fixed. The mesh size is calculated based on structures dimension. Hence, by applying velocity, mesh size to the CFL formula and equating it to 1, calculate the step size.  
 
-### 5. Meshing
+### 2.5 Meshing
 
 **Mesh Size Calculation:**  Take the shortest side of the building and divide it by 10. This gives an approximate minimum mesh size for the building. As you move toward the outer bounding box, multiply the mesh size by 2 at each step.  
 
@@ -115,7 +115,7 @@ Refer to the lecture for explanation on CFL number. Here velocity of the model i
 
 **Review Mesh quality:** Go to Mesh → Mesh Quality to check the different mesh quality parameters. In the quality criteria, select Minimum Edge to verify the minimum mesh size. With this mesh size, check the CFL number to ensure it is below 1 for simulation stability.
 
-### 6. Useful tools
+### 2.6 Useful tools
 
 Some of the useful tools and commands in GiD are categorized and given below
 
@@ -147,11 +147,11 @@ Some of the essential GiD tools are categorized below. Refer to the figure and t
 - **GiD → Geometry → Edit → Collapse → Model**. This deletes unnecessary (and perhaps hidden) lines and nodes. It is helpful especially when importing geometries from programms such as Autocad, Rhino and Sketchup, by exploding or ungrouping the geometry.
 
 
-### 7. Run the preliminary (test) simulation 
+### 2.7 Run the preliminary (test) simulation 
 Before running the full simulation, a good way to determine if everything has been defined correctly is to run the simulation from GiD for 3-5 time steps to make sure it runs. To see if it is running you can check GiD → Calculate → View process info. If the simulation is running for 3-5 time steps, it means that there are no errors in modelling and definition of the simulation of parameters.
 
 ___
-## 1.3. Outputs from GiD
+## 3. Outputs from GiD
 After completing the modelling of the structure in GiD, you can go to *Kratos&rarr;Write calculation files - No run*. This will generate several files, among which the following four are essential for running the simulation
 
 1. **MainKratos.py** - File from which you run the simulation
@@ -171,7 +171,7 @@ The process files can be found in the example. Do not forget to copy the files t
 **Note that you are not restricted only to the following processes. You are free to add more outputs of your choice.**
 
 ___
-### 1. Point output process
+### 3.1 Point output process
 
 The `"point_output_process"` writes results from a chosen geometrical position (under "position") in the model to a file. It first searches the entity containing the requested output location and then interpolates the requested variable(s). The output can be requested for elements, conditions and nodes (under "entity_type"). If you choose "nodes", no geometrical interpolation is performed and the exact coordinates have to be specified, therefore it is advised to specify it for "elements". Output ranges from pressure to velocities in different directions (under "output_variables").
 
@@ -208,7 +208,7 @@ Below is an example of the json parameters for the `"point_output_process"`:
 }
 ```
 ___
-### 2. Line output process
+### 3.2 Line output process
 
 The `"line_output_process"` extracts output for several points along a line to a file. Internally it holds an object of type "MultiplePointsOutputProcess". By defining the "start_point" and "end_point" coordinates as well as the number of sampling points, we can receive multiple point outputs, without having to define each point separately.
 
@@ -244,7 +244,7 @@ Below is an example of the json parameters for the `"line_output_process"`:
 }   
 ```
 ___
-### 3. Force output process
+### 3.3 Force output process
 After analyzing the flow field and the pressure around the building, we need to analyze the forces created from the wind loading on the building. There are 2 processes to analyze the forces on the building:
 
 - `compute_global_force_process` is used to get the global forces (and moments) on the building in the flow- and body attached axis system. Here you need to define the reference point at the base of the building (0,0,0), in order to get the time series of the base forces and moments.
@@ -296,7 +296,7 @@ Below is an example of the json parameters for the `"compute_global_force_proces
 ```
 
 ___
-### 4. CFL output process
+### 3.4 CFL output process
 The CFL number depends on the flow field, and differ from each case of simulation. Kratos has a module to print out the CFL number throughout the simulation. This process will give these following output for each time step:
 - **max_value**: The maximum CFL number of the simulation.
 - **max_id**: The ID of the element with the maximum CFL number.
@@ -397,7 +397,7 @@ Below is an example of the json parameters for the `"cfl_output_process"`:
 ```
 
 ___
-### 5. HDF5 output process
+### 3.5 HDF5 output process
 This process output the .h5 files which are necessary for visualizing the flow field in Paraview. The files contains the pressure and velocity field in the fluid domain, and the pressure distribution in the surface of the structure. 
 You can change the file naming convention and its directory in the `"file_name"` field. The parameters with `<>` inside `"file_name"` indicate a placeholder value and will change depending on what is written.
 - `<model_part_name>` will change depending on the `"model_part_name"` chosen in the process.
