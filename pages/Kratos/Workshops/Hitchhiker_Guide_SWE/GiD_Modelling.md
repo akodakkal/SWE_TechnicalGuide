@@ -120,7 +120,7 @@ Refer to the lecture for explanation on CFL number. Here velocity of the model i
 Some of the useful tools and commands in GiD are categorized and given below
 
 Some of the essential GiD tools are categorized below. Refer to the figure and the numbered items (anticlockwise direction) for reference 
-![GiD User Interface](../../../../images/WindEngineering/GiD_User_Interface.PNG)
+![GiD User Interface](../../../../images/WindEngineering/GiD_User_Interface.png)
 
 1. **Viewing tools**  
     1 - List of views  
