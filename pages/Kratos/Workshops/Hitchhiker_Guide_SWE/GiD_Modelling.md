@@ -115,7 +115,7 @@ Refer to the lecture for explanation on CFL number. Here velocity of the model i
 
 **Review Mesh quality:** Go to Mesh → Mesh Quality to check the different mesh quality parameters. In the quality criteria, select Minimum Edge to verify the minimum mesh size. With this mesh size, check the CFL number to ensure it is below 1 for simulation stability.
 
-### 6. Usefull tools
+### 6. Useful tools
 
 Some of the useful tools and commands in GiD are categorized and given below
 
@@ -136,7 +136,7 @@ Some of the essential GiD tools are categorized below. Refer to the figure and t
     12 - Turn on and off the desired layer. If "Yellow" turned on    
     11 - Infromation about layers  
 
-3. **Meshing**
+3. **Meshing**  
     7 - Turn on and off the mesh view  
     8 - Draws the mesh size data on the model  
     9 - Model and mesh detialls  
