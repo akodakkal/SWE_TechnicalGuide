@@ -8,6 +8,6 @@ It is important to note that, given the annual organization of the Structural Wi
 4. [FFMPEG installation](FFMPEG.md) 
 5. [GiD and Kratos problem type installation](GiD.md) 
 6. [Running an example with Kratos Multiphysics](Testing_Kratos_Installation.md) 
-7. [Paraview installation](Paraview.md) 
+7. [ParaView installation](Paraview.md) 
 8. [Installing and running ParOptBeam](ParOptBeam.md) 
 9. [Remote computing and its dependencies](Remote_Computing.md) 

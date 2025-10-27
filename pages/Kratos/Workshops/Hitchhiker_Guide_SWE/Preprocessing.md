@@ -311,7 +311,7 @@ You can change the file naming convention and its directory in the `"file_name"`
 - `<time>` will change depending on the simulation time that is currently printed by the process. 
 - `<step>` will change depending on the time step that is currently printed by the process. You can use this as an alternative, but using `<time>` is of course more natural.
 
-To use the output of this process, follow the Hitchhiker guide in [postprocessing with paraview](Postprocessing.md#1-postprocessing-in-paraview).
+To use the output of this process, follow the Hitchhiker guide in [Postprocessing with ParaView](Postprocessing.md#1-postprocessing-in-paraview).
 
 ```json
 {

@@ -396,13 +396,13 @@ Below is an example of the json parameters for the `"cfl_output_process"`:
 
 ___
 ### 3.5 HDF5 output process
-This process output the .h5 files which are necessary for visualizing the flow field in Paraview. The files contains the pressure and velocity field in the fluid domain, and the pressure distribution in the surface of the structure. 
+This process output the .h5 files which are necessary for visualizing the flow field in ParaView. The files contains the pressure and velocity field in the fluid domain, and the pressure distribution in the surface of the structure. 
 You can change the file naming convention and its directory in the `"file_name"` field. The parameters with `<>` inside `"file_name"` indicate a placeholder value and will change depending on what is written.
 - `<model_part_name>` will change depending on the `"model_part_name"` chosen in the process.
 - `<time>` will change depending on the simulation time that is currently printed by the process. 
 - `<step>` will change depending on the time step that is currently printed by the process. You can use this as an alternative, but using `<time>` is of course more natural.
 
-To use the output of this process, follow the Hitchhiker guide in [postprocessing with paraview](Postprocessing.md#1-postprocessing-in-paraview).
+To use the output of this process, follow the Hitchhiker guide in [postprocessing with ParaView](Postprocessing.md#1-postprocessing-in-paraview).
 
 ```json
 {

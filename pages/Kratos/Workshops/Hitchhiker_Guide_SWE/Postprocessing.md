@@ -1,18 +1,18 @@
 # Postprocessing
 Upon finishing the simulation, the results should be processed in order to be comprehensibly displayed in the final report. This section provides the guidelines for postprocessing and is organized as follows
 
-1. Preparation works for postprocessing in Paraview
-2. Postprocessing with Paraview
+1. Preparation works for postprocessing in ParaView
+2. Postprocessing with ParaView
 3. Postprocessing with python
 4. Input processing for ParOptBeam
 
 
 ___
-## 1. Preparation works for postprocessing in Paraview
+## 1. Preparation works for postprocessing in ParaView
 
 ### 1.1 Including Cp values to the h5 files
 
-The output results from Kratos will be in format .h5. This result will not inbuilt contain coeffcient of pressure values. So we should add it to visuvalise it in paraview. To do that,
+The output results from Kratos will be in format .h5. This result will not inbuilt contain coeffcient of pressure values. So we should add it to visuvalise it in ParaView. To do that,
 
 1. Add the script "add_cp_to_h5.py" to the directory "results" in your project. This file shall be found in the sample files we provided you. Take a look at the script, you should modify some values according with your simulation parameters.
 
@@ -27,7 +27,7 @@ $ python3 add_cp_to_h5.py
 
 ### 1.2 Convert H5 to Xdmf
 
-Paraview can't read h5 files by default. In order to visualize the result, we need to generate an ".xdmf" file. Follow these steps to generate it:
+ParaView can't read h5 files by default. In order to visualize the result, we need to generate an ".xdmf" file. Follow these steps to generate it:
 
 1. Load the default Kratos version at the cluster if it is not already loaded (it has to be loaded every time we open a new terminal):
 ```shell
@@ -39,20 +39,20 @@ $ convertH5toXdmf <name_of_files_until_dash>
 ```
 3. An ".xdmf" file will be created. Copy all the h5 files and the xdmf file to your computer to visualize. 
 
-**Note that the xdmf file only serves as a link between the Paraview and the h5 files. Paraview need both the h5 and xdmf files.* 
+**Note that the xdmf file only serves as a link between the ParaView and the h5 files. ParaView need both the h5 and xdmf files.* 
 
-## 2. Postprocessing in Paraview
+## 2. Postprocessing in ParaView
 
-After the files are ready to be read in Paraview, here are some helpful commands when using the software:
+After the files are ready to be read in ParaView, here are some helpful commands when using the software:
 
 
-1. **Paraview → Edit → Settings → General**, search for “Cache” and tick “Cache Geometry For Animation” to speed up picture creation for animation.
+1. **ParaView → Edit → Settings → General**, search for “Cache” and tick “Cache Geometry For Animation” to speed up picture creation for animation.
 
 2. **Import flow domain**: Velocity in model part “FluidModelPart.fluid_computational_model_part”:
   - Create **slices** &rarr; define a plane by its origin (coordinates) and the normal (coordinates or select normal).
   - Use **stream tracer** to visualize velocity (one of the symbols above the pipeline browser).
   - **Set opacity of the flow domain** so that slices, stream tracer and structure can be seen. Adjust lighting according to preference.
-  - Vorticity visualization using the **Q-criterion** (later use iso-surface for Q-values in range of 0.2 - 0.01 1/s): follow [this link](https://discourse.paraview.org/t/qcriterion-in-paraview/2355) for a guide in using Q-criterion in Paraview.
+  - Vorticity visualization using the **Q-criterion** (later use iso-surface for Q-values in range of 0.2 - 0.01 1/s): follow [this link](https://discourse.paraview.org/t/qcriterion-in-paraview/2355) for a guide in using Q-criterion in ParaView.
 
 3. **Import pressure on Structure**: Pressure in model part  “FluidModelPart.NoSlip3D_structure” (or similar ModelPart name instead of structure):
   -  Same principles regarding creating slices and visualization as with the velocity.
