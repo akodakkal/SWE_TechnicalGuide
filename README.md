@@ -51,5 +51,5 @@ ParOptBeam (Parametrical Optimizable Beam) is a program from the Chair of Struct
 A separate postprocessing tool is not required for ParOptBeam, as the program itself produces directly interpretable outputs. All infromation regarding CSD is explained in [ParOptBeam Guide](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/ParOptBeam_Guide.md)
 
 
-[Project Work Flow](images/WindEngineering/ProjectFlow.png)
+![Project Work Flow](images/WindEngineering/ProjectFlow.png)
 
