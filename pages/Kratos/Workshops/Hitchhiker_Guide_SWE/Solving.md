@@ -5,15 +5,16 @@ This section provides the guidelines for solving a CFD prblem in KratosMultiphys
 2. Modifications to Project parameters 
 3. Remote Computing
 
+
 ## 1. Project parameters for KratosFluidMechanicsApplication
 
 Project_parameters.json contains the all information that a KratosFluidMechanicsApplication needs to solve a problem and export the output. It is directly read by the Main python file (which runs the simulation). The MDPA (model/mesh file) and fluid parameters file are linked to Main python file through Project_parameters.json. A project parameter file contains the following information. 
 
-1. analysis_stage - Gives information to Kratos on which application to use
+1. **analysis_stage** - Gives information to Kratos on which application to use
 
-2. problem_data - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
+2. **problem_data** - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
 
-3. processes - The "processes" contains all the processes that needs to be executed during the simulation, such as boundary conditions, initial conditions, etc. For the project, we will use following processes - boundary_conditions_process_list, gravity and auxiliar_process_list. 
+3. **processes** - The "processes" contains all the processes that needs to be executed during the simulation, such as boundary conditions, initial conditions, etc. For the project, we will use following processes - boundary_conditions_process_list, gravity and auxiliar_process_list. 
 
 "boundary_conditions_process_list" a type of processes in Kratos which will be used to apply boundary conditions - inlet_velocity, outlet_pressure, slip condition and no slip condition to the model. Here make sure that the following BC settings applied from GiD are present. 
 
@@ -22,14 +23,12 @@ Project_parameters.json contains the all information that a KratosFluidMechanics
  - "apply_noslip_process" for the no slip conditions applied to the model
  - "apply_slip_process" for thr slip conditions applied to the model
 
-4. solver_settings - This parameter gives the configuration for the solvers. It includes information on solver types, convergence tolerances, iteration limits, etc. The important parameter to check here is "time_step".
+4. **solver_settings** - This parameter gives the configuration for the solvers. It includes information on solver types, convergence tolerances, iteration limits, etc. The important parameter to check here is "time_step".
 
-5. output_processes - The output_processes section defines the format (GiD, VTK, h5 and ASCII) and under each format it gives information what information has to be written. ************** Each format contains oinformaion on solution steps variables, model parts which outputs has to be written 
+5. **output_processes** - The output_processes section defines the format (GiD, VTK, h5 and ASCII). Each format contains informaion on solution steps variables(such as pressure, velocity), model parts of which solution has to written, etc
 
 **Note** GiD file formats are directly readable by GiD, VTK format is directly readable by Paraview. h5 format needs to be converted into xdmf format for reading in ParaView. frequency (example - after every 3 times step write the result) and variables (Pressure, velocity, etc)of the result file. GiD 
 
-
-6. modelers - *************
 
 ## 2. Modifications to Project parameters
 
@@ -40,7 +39,7 @@ In ProjectParametersCustom "processes" and "output_processes" needs to be update
 **Note that you are not restricted only to the following processes. You are free to add more outputs of your choice.**
 
 ### 2.1 output_processes
-___
+
 #### 2.1.1 HDF5 output process
 
 Under "output_processes", GiD would have generated "gid_output" and "vtk_output". If it is present in your file, remove it. Instead the output files for our project is written in h5 format. It is because, our simulation has large domain size (high number of Finite elements) and requires many time steps. Hence VTK and GID file formats will occupy large memory when compared to h5 files. The files contains the pressure and velocity field in the fluid domain, and the pressure distribution in the surface of the structure. 
@@ -118,9 +117,6 @@ For the project work, with the structure base positioned at (0,0,0) and structur
 
 Below is an example of the json parameters for the `"point_output_process"`:
 ```json
-
-
-
 {
     "output_processes"        : {
         "ascii_output"            : [
@@ -184,13 +180,12 @@ Below is an example of the json parameters for the `"line_output_process"`:
 ### 2.2 processes
 
 Processes in coding aspect is Python module defined by a set of parameters that specify its behavior. These modules are built-in within Kratos. In addition new modules shall be written and integrated into Kratos during the execution of a simulation without the need for modifying the core Kratos source code. If a new process has been written and added to project parameter, these python modules must be placed in the folder where project parameter is present for kratos to read it during the simulation. For our project three additional process are needed. These process files can be found in the example. Copy the files to your folder.
-___
+
 #### 2.2.1 Force output process
 After analyzing the flow field and the pressure around the building, we need to analyze the forces created from the wind loading on the building. There are 2 processes to analyze the forces on the building:
 
 - `compute_global_force_process` is used to get the global forces (and moments) on the building in the flow- and body attached axis system. Here you need to define the reference point at the base of the building (0,0,0), in order to get the time series of the base forces and moments.
 - `compute_level_force_process` is used to to get the level forces (and moment) in the flow- and body-attached axis system. We define the "start_point" and "end_point" coordinates from the building base (0,0,0) to the top of the building (0,0,H), as well as the number of intervals. The intervals are used as sampling points, meaning the number of intervals will represent the number of level forces you receive after the simulation. The forces at each level are then saved as a time history load, which will later be exported to ParOptBeam as a time history load for the computational structural dynamics (CSD), one way coupling (OWC).These processes are 
-
 
 Below is an example of the json parameters for the `"compute_global_force_process"` and `"compute_level_force_process"`:
 ```json
@@ -235,7 +230,6 @@ Below is an example of the json parameters for the `"compute_global_force_proces
     }
 }   
 ```
-
 ___
 #### 2.2.2 CFL output process
 The CFL number depends on the flow field, and differ from each case of simulation. Kratos has a module to print out the CFL number throughout the simulation. This process will give these following output for each time step:
@@ -384,7 +378,6 @@ $ ssh -oHostKeyAlgorithms=+ssh-dss <user-name>@<IP-address>
 ```
 
 **Note: Some operating systems might have problems connecting via ssh to the cluster, due to the old operating system at the cluster, that is why we use the parameter "-oHostKeyAlgorithms=+ssh-dss". If you face any error using this command try to substitute it for "-oHostKeyAlgorithms=+ssh-rsa"*
-
 
 ___
 ### 3.3 Transfer files
