@@ -10,11 +10,11 @@ This section provides the guidelines for solving a CFD prblem in KratosMultiphys
 
 Project_parameters.json contains the all information that a KratosFluidMechanicsApplication needs to solve a problem and export the output. It is directly read by the Main python file (which runs the simulation). The MDPA (model/mesh file) and fluid parameters file are linked to Main python file through Project_parameters.json. A project parameter file contains the following information. 
 
-**1. analysis_stage** - Gives information to Kratos on which application to use
+1.**analysis_stage** - Gives information to Kratos on which application to use
 
-2. **problem_data** - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
+2.**problem_data** - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
 
-3. **processes** - The "processes" contains all the processes that needs to be executed during the simulation, such as boundary conditions, initial conditions, etc. For the project, we will use following processes - boundary_conditions_process_list, gravity and auxiliar_process_list. 
+3.**processes** - The "processes" contains all the processes that needs to be executed during the simulation, such as boundary conditions, initial conditions, etc. For the project, we will use following processes - boundary_conditions_process_list, gravity and auxiliar_process_list. 
 
 "boundary_conditions_process_list" a type of processes in Kratos which will be used to apply boundary conditions - inlet_velocity, outlet_pressure, slip condition and no slip condition to the model. Here make sure that the following BC settings applied from GiD are present. 
 
