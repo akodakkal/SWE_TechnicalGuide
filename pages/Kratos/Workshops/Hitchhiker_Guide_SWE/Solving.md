@@ -10,7 +10,7 @@ This section provides the guidelines for solving a CFD prblem in KratosMultiphys
 
 Project_parameters.json contains the all information that a KratosFluidMechanicsApplication needs to solve a problem and export the output. It is directly read by the Main python file (which runs the simulation). The MDPA (model/mesh file) and fluid parameters file are linked to Main python file through Project_parameters.json. A project parameter file contains the following information. 
 
-1. **analysis_stage** - Gives information to Kratos on which application to use
+**1. analysis_stage** - Gives information to Kratos on which application to use
 
 2. **problem_data** - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
 
