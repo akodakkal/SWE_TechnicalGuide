@@ -108,7 +108,7 @@ To use the output of this process, follow the Hitchhiker guide in [postprocessin
 ```
 
 ___
-**2.1.2 Point output process**
+#### 2.1.2 Point output process
 
 The `"point_output_process"` writes results from a chosen geometrical position (under "position") in the model to a file. It first searches the entity containing the requested output location and then interpolates the requested variable(s). The output can be requested for elements, conditions and nodes (under "entity_type"). If you choose "nodes", no geometrical interpolation is performed and the exact coordinates have to be specified, therefore it is advised to specify it for "elements". Output ranges from pressure to velocities in different directions (under "output_variables").
 
@@ -145,7 +145,7 @@ Below is an example of the json parameters for the `"point_output_process"`:
 }
 ```
 ___
-**2.1.3** Line output process
+#### 2.1.3 Line output process
 
 The `"line_output_process"` extracts output for several points along a line to a file. Internally it holds an object of type "MultiplePointsOutputProcess". By defining the "start_point" and "end_point" coordinates as well as the number of sampling points, we can receive multiple point outputs, without having to define each point separately.
 
@@ -181,7 +181,7 @@ Below is an example of the json parameters for the `"line_output_process"`:
 }   
 ```
 
-### 2.1 processes
+### 2.2 processes
 
 Processes in coding aspect is Python module defined by a set of parameters that specify its behavior. These modules are built-in within Kratos. In addition new modules shall be written and integrated into Kratos during the execution of a simulation without the need for modifying the core Kratos source code. If a new process has been written and added to project parameter, these python modules must be placed in the folder where project parameter is present for kratos to read it during the simulation. For our project three additional process are needed. These process files can be found in the example. Copy the files to your folder.
 ___
