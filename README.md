@@ -3,9 +3,9 @@
 
 [1. Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides)
 
-[2. Preprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/GiD_Modelling.md)
+[2. Preprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Preprocessing.md)
 
-[3. Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Remote_Computing.md)
+[3. Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Solving.md)
 
 [4. Postprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Postprocessing.md)
 
@@ -26,7 +26,7 @@ These steps will be carried out both for CFD and CSD.
 
 ## 1. Preprocessing
 
-Preprocessing refers to generating data for solving. In this project, it is carried out by generating CAD modelling and mesh generation for the Structure and Fluid domain in GiD. GiD is a licensed software that will be provided during the course. [Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/GiD.md). Preprocessing with GiD is explained in [Preprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/GiD_Modelling.md)
+Preprocessing refers to generating data for solving. In this project, it is carried out by generating CAD modelling and mesh generation for the Structure and Fluid domain in GiD. GiD is a licensed software that will be provided during the course. [Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/GiD.md). Preprocessing with GiD is explained in [Preprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Preprocessing.md)
 
 ## 2. Solving
 

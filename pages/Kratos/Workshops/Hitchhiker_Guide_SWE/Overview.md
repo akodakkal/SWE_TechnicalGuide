@@ -3,9 +3,9 @@
 
 [1. Installation Guides](Installation%20Guides)
 
-[2. GiD Modelling](GiD_Modelling.md)
+[2. GiD Modelling](Preprocessing.md)
 
-[3. Remote Computing](Remote_Computing.md)
+[3. Solving](Solving.md)
 
 [4. Postprocessing](Postprocessing.md)
 
