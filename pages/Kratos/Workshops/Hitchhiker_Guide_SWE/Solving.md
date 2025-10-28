@@ -10,11 +10,11 @@ This section provides the guidelines for solving a CFD prblem in KratosMultiphys
 
 Project_parameters.json contains the all information that a KratosFluidMechanicsApplication needs to solve a problem and export the output. It is directly read by the Main python file (which runs the simulation). The MDPA (model/mesh file) and fluid parameters file are linked to Main python file through Project_parameters.json. A project parameter file contains the following information. 
 
-1.**analysis_stage** - Gives information to Kratos on which application to use
+**1.analysis_stage** - Gives information to Kratos on which application to use
 
-2.**problem_data** - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
+**2.problem_data** - It contains general settings for the simulation, such as the problem name, start and end time, etc. 
 
-3.**processes** - The "processes" contains all the processes that needs to be executed during the simulation, such as boundary conditions, initial conditions, etc. For the project, we will use following processes - boundary_conditions_process_list, gravity and auxiliar_process_list. 
+**3.processes** - The "processes" contains all the processes that needs to be executed during the simulation, such as boundary conditions, initial conditions, etc. For the project, we will use following processes - boundary_conditions_process_list, gravity and auxiliar_process_list. 
 
 "boundary_conditions_process_list" a type of processes in Kratos which will be used to apply boundary conditions - inlet_velocity, outlet_pressure, slip condition and no slip condition to the model. Here make sure that the following BC settings applied from GiD are present. 
 
@@ -32,7 +32,7 @@ Project_parameters.json contains the all information that a KratosFluidMechanics
 
 ## 2. Modifications to Project parameters
 
-The information provided below includes modificationsbthat needs to be carried out in **ProjectParameters.json** file. In order to have a copy of your original MainKratos and ProjectParameters file, we will create copies of them and name them MainKratosCustom.py and ProjectParametersCustom.json. **Make sure to update the line in MainKratosCustom referring to the project parameters from ProjectParameters &rarr; ProjectParametersCustom.** 
+The information provided below includes modificationsbthat needs to be carried out in **ProjectParameters.json** file. In order to have a copy of your original MainKratos and ProjectParameters file, we will create copies of them and name them MainKratosCustom.py and ProjectParametersCustom.json. Make sure to update the line in MainKratosCustom referring to the project parameters from ProjectParameters &rarr; ProjectParametersCustom.
 
 In ProjectParametersCustom "processes" and "output_processes" needs to be updated which is given below. It is also advised to refer to how the processes have been applied in the CFD_HighRiseExampleFine example. As different buildings may require additional process inputs, discuss with project coordinator. 
 
@@ -47,8 +47,6 @@ You can change the file naming convention and its directory in the `"file_name"`
 - `<model_part_name>` will change depending on the `"model_part_name"` chosen in the process.
 - `<time>` will change depending on the simulation time that is currently printed by the process. 
 - `<step>` will change depending on the time step that is currently printed by the process. You can use this as an alternative, but using `<time>` is of course more natural.
-
-To use the output of this process, follow the Hitchhiker guide in [postprocessing with ParaView](Postprocessing.md#1-postprocessing-in-paraview).
 
 ```json
 {
