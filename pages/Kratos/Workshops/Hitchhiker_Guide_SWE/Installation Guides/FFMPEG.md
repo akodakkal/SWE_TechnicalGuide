@@ -6,7 +6,7 @@ FFmpeg is available for [download here](https://www.ffmpeg.org/download.html).
 
 ![GiD_Kratos_retrieve](../../../../../images/WindEngineering/FFMPEG_1.PNG)
 
-![GiD_Kratos_retrieve](../../../../../images/WindEngineering/FFMPEG2_2.png)
+![GiD_Kratos_retrieve](../../../../../images/WindEngineering/FFMPEG_2.png)
 
 
 ### 1. For Windows:
