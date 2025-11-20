@@ -14,7 +14,7 @@ In order to use GiD, you will need to activate a professional license, as the fr
 
 ![Kratos_problem_type_Download](../../../../../images/WindEngineering/Kratos_problem_type_download.png)
 
-![Kratos_problem_type_Extraction](../../../../../images/WindEngineering/Kratos_problem_type_extraction.png)
+![Kratos_problem_type_Extraction](../../../../../images/WindEngineering/Kratos_problem_type_extraction.PNG)
 
 Restart GiD and go to Data → Problem type. Kratos should appear. If Kratos is not found, then it is not properly extracted in the location. 
 
