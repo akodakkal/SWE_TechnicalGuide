@@ -10,7 +10,7 @@ GiD and the Kratos problem type for GiD will be used during the project work for
 In order to use GiD, you will need to activate a professional license, as the free license is limited. You will be provided with access to this license during the course. After registering, open GiD and go to **" Help &rarr; Register GiD &rarr; Named user &rarr; sign in"**. To sign in, put your TUM email address and password you used during registration.
 
 ### 2. Install Kratos Problem Type: 
-[Download Kratos problem type](https://downloads.gidsimulation.com/#gidmodules/) version *“kratos- 9.5.1"* as a zip file and extract kratos.gid folder (inside kratos- 9.5.1) to /../images/GiD/GiD 17.0.5/problemtypes.  
+[Download Kratos problem type](https://downloads.gidsimulation.com/#gidmodules/) version *“kratos- 9.5.1"* as a zip file and extract kratos.gid folder (inside kratos- 9.5.1) to /../GiD 17.0.5/problemtypes.  
 
 ![Kratos_problem_type_Download](../../../../../images/WindEngineering/Kratos_problem_type_download.png)
 
