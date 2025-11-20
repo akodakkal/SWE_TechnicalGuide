@@ -12,12 +12,14 @@ In order to use GiD, you will need to activate a professional license, as the fr
 ### 2. Install Kratos Problem Type: 
 [Download Kratos problem type](https://downloads.gidsimulation.com/#gidmodules/) version *“kratos- 9.5.1"* as a zip file and extract kratos.gid folder (inside kratos- 9.5.1) to /../GiD 17.0.5/problemtypes.  
 
+
 ![Kratos_problem_type_Download](../../../../../images/WindEngineering/Kratos_problem_type_download.png)
+
 
 ![Kratos_problem_type_Extraction](../../../../../images/WindEngineering/Kratos_problem_type_extraction.PNG)
 
 Restart GiD and go to Data → Problem type. Kratos should appear. If Kratos is not found, then it is not properly extracted in the location. 
 
-![GiD_Kratos_problem_type](../../../../../images/WindEngineering/GiD_Kratos_problem_type.png)
+![GiD_Kratos_problem_type](../../../../../images/WindEngineering/GiD_Kratos_problem_type.PNG)
 
 Follow [this example](Testing_Kratos_Installation.md) to see whether you have properly installed GiD and Kratos
