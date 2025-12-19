@@ -80,7 +80,7 @@ For this project, the total simulation time must be divided into two parts.
     
 **Rampup Time Interval:** During the rampup phase, the inlet velocity of the domain is increased from 0 to U over a time period 2T (this increase can either be linear or sinusoidal). Here T = 1/f, f is the vortex shedding frequency. 
 
-**Stabilization $ Stable Interval:**  After the ramp-up phase, the flow is allowed to stabilize for an additional time period 2T. Thus, a total of 4T (ramp-up + stabilization) is allocated before the stable interval. Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
+**Stabilization & Stable Interval:**  After the ramp-up phase, the flow is allowed to stabilize for an additional time period 2T. Thus, a total of 4T (ramp-up + stabilization) is allocated before the stable interval. Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
 
 Total Time Interval = 2T + 2T + 16T = 20T
 
@@ -163,5 +163,5 @@ Although the problem can be directly solved by Kratos in GiD, the main reason fo
 1. As the simulations demand significant computational power, a remote connection to the cluster of the Chair of Structural Analysis is provided where the simulations are executed.
 2. GiD provides limited user control over modeling options and output parameter settings when compared to directly working with the ProjectParameter file. 
 
-The changes that need to be carried out in ProjectParameters.json and how to run the simulation in the cluster are explained on the next page [Solving](Solving.md). 
+The changes that need to be carried out in ProjectParameter.json and how to run the simulation in the cluster are explained on the next page [Solving](Solving.md). 
 
