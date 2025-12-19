@@ -25,14 +25,14 @@ Project_parameters.json contains the all information that a Kratos FluidDynamics
 
 4. **solver_settings** - This parameter gives the configuration for the solvers. It includes information on solver types, convergence tolerances, iteration limits, etc. The important parameter to check here is "time_step".
 
-5. **output_processes** - The output_processes section defines the format (GiD, VTK, h5 and ASCII). Each format contains informaion on solution steps variables(such as pressure, velocity), model parts of which solution has to written, etc
+5. **output_processes** - The output_processes section defines the format (GiD, VTK, h5 and ASCII). Each format contains informaion on solution steps variables(such as pressure, velocity), model parts of which solution has to written, etc. 
 
-**Note** GiD file formats are directly readable by GiD and VTK format is directly readable by Paraview. But h5 format needs to be converted into xdmf format for reading in ParaView. frequency (example - after every 3 times step write the result) and variables (Pressure, velocity, etc)of the result file. GiD 
+**Note** GiD file formats are directly readable by GiD and VTK format is directly readable by Paraview. But h5 format needs to be converted into xdmf format for reading in ParaView. 
 
 
 ## 2. Modifications to Project parameters
 
-The information provided below includes modificationsbthat needs to be carried out in **ProjectParameters.json** file. In order to have a copy of your original MainKratos and ProjectParameters file, we will create copies of them and name them MainKratosCustom.py and ProjectParametersCustom.json. Make sure to update the line in MainKratosCustom referring to the project parameters from ProjectParameters &rarr; ProjectParametersCustom.
+The information provided below includes modifications that needs to be carried out in **ProjectParameters.json** file. In order to have a copy of your original ProjectParameters file, we will create copy of it and name them ProjectParametersCustom.json. Make sure to update the line in MainKratos.py referring to the project parameters from ProjectParameters &rarr; ProjectParametersCustom.
 
 In ProjectParametersCustom "processes" and "output_processes" needs to be updated which is given below. It is also advised to refer to how the processes have been applied in the CFD_HighRiseExampleFine example. As different buildings may require additional process inputs, discuss with project coordinator. 
 
