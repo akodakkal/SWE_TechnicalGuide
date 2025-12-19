@@ -78,9 +78,9 @@ For this project, the total simulation time must be divided into two parts.
         - Rampup & Stabilization Time Interval  
         - Run Time Interval  
     
-**Rampup Time Interval:** During the rampup phase, the inlet velocity of the domain is increased from 0 to U over a time period 2T (this increase can either be linear or sinusoidal). Here T = 1/f, f is the vortex shedding frequency. 
+**Rampup & Stabilization Time Interval:** During the rampup phase, the inlet velocity of the domain is increased from 0 to U over a time period 2T (this increase can either be linear or sinusoidal). Here T = 1/f, f is the vortex shedding frequency. After the ramp-up phase, the flow is allowed to stabilize for an additional time period 2T. Thus, a total of 4T (ramp-up + stabilization) is allocated before the stable interval. 
 
-**Stabilization & Stable Interval:**  After the ramp-up phase, the flow is allowed to stabilize for an additional time period 2T. Thus, a total of 4T (ramp-up + stabilization) is allocated before the stable interval. Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
+**Stable Interval:** Once the flow is stabilized, the simulation should continue for 16T, during which measurements such as pressure, velocity, and other parameters are recorded   
 
 Total Time Interval = 2T + 2T + 16T = 20T
 
