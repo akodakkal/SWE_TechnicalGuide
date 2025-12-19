@@ -1,14 +1,14 @@
 # Solving
 This section provides the guidelines for solving a CFD prblem in KratosMultiphysics and is organized as follows.
 
-1. Project parameters for KratosFluidMechnaicsApplication
+1. Explanation of Project parameters for Kratos FluidDynamicsApplication
 2. Modifications to Project parameters 
 3. Remote Computing
 
 
-## 1. Project parameters for KratosFluidMechanicsApplication
+## 1. Explanation of Project parameters for Kratos FluidDynamicsApplication
 
-Project_parameters.json contains the all information that a KratosFluidMechanicsApplication needs to read the model, solve a problem and export the output. It is directly read by the Main python file (which runs the simulation). The MDPA (model/mesh file) and fluid parameters file are linked to Main python file through Project_parameters.json. A project parameter file contains the following information. 
+Project_parameters.json contains the all information that a Kratos FluidDynamicsApplication needs to read the model, solve a problem and export the output. It is directly read by the Main python file (which runs the simulation). The MDPA (model/mesh file) and fluid parameters file are linked to Main python file through Project_parameters.json. A project parameter file contains the following information. 
 
 **1.analysis_stage** - Gives information to Kratos on which application to use
 
