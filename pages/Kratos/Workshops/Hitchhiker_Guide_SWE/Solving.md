@@ -27,7 +27,7 @@ Project_parameters.json contains the all information that a Kratos FluidDynamics
 
 5. **output_processes** - The output_processes section defines the format (GiD, VTK, h5 and ASCII). Each format contains informaion on solution steps variables(such as pressure, velocity), model parts of which solution has to written, etc
 
-**Note** GiD file formats are directly readable by GiD, VTK format is directly readable by Paraview. h5 format needs to be converted into xdmf format for reading in ParaView. frequency (example - after every 3 times step write the result) and variables (Pressure, velocity, etc)of the result file. GiD 
+**Note** GiD file formats are directly readable by GiD and VTK format is directly readable by Paraview. But h5 format needs to be converted into xdmf format for reading in ParaView. frequency (example - after every 3 times step write the result) and variables (Pressure, velocity, etc)of the result file. GiD 
 
 
 ## 2. Modifications to Project parameters
