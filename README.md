@@ -30,7 +30,7 @@ Preprocessing involves preparing the input data required for the simulation. For
 
 ## 2. Solving
 
-KratosMultiphysics an open-source multiphysics software developed by CIMNE (International Center for Numerical Methods in Engineering) will be used as solver. Kratos several applications such as Fluid Dynamics, Structural Mechanics, and Optimization. In this project, the Fluid Mechanics Application of Kratos will be used for CFD simulations - [KratosMultiphysics Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Kratos_with_Python.md). For more information about Kratos and its use cases - [Kratos Documentation](https://kratosmultiphysics.github.io/Kratos/). Solver information for Kratos relating to this project is explained in [Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Solving.md)
+KratosMultiphysics an open-source multiphysics software developed by CIMNE (International Center for Numerical Methods in Engineering) will be used as solver. Kratos has several applications such as Fluid Dynamics, Structural Mechanics, and Optimization. In this project, the Fluid Mechanics Application of Kratos will be used for CFD simulations - [KratosMultiphysics Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Kratos_with_Python.md). For more information about Kratos and its use cases - [Kratos Documentation](https://kratosmultiphysics.github.io/Kratos/). Solver information for Kratos relating to this project is explained in [Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Solving.md)
 
 ## 3. Postprocessing
 
