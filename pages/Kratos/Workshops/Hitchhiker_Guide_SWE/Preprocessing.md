@@ -151,7 +151,7 @@ Before running the full simulation, a good way to determine if everything has be
 
 ___
 ## 3. Outputs from GiD
-After the completion of modelling in GiD, you can go to *Kratos&rarr;Write calculation files - No run*. This will generate the files needed for simulation without running it. Among these, the following four are essential for running the simulation with externally (outside of GiD) with python. 
+After the completion of modelling in GiD, you can go to *Kratos&rarr;Write calculation files - No run*. This will generate the files needed for simulation without running it. Among these, the following four are essential for running the simulation externally (outside of GiD) with python. 
 
 1. **MainKratos.py** - File from which you run the simulation
 2. **file_name.mdpa** - Contains mesh information of the model
