@@ -1,4 +1,4 @@
-# Solving
+# Simulation_setup_and_run
 This section provides the guidelines for solving a CFD prblem in KratosMultiphysics and is organized as follows.
 
 1. Explanation of Project parameters for Kratos FluidDynamicsApplication
