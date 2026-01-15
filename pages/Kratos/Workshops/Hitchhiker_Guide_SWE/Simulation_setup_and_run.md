@@ -452,7 +452,7 @@ $ export OMP_NUM_THREADS=8
 ```
 - Run the simulation
 ```shell
-$ python3 MainKratosCustom.py
+$ python3 MainKratosCustom.py > simulation.log
 ```
 <!--
 - Using the template you have in `../Documents/Templates/q_run.sh` create a **q_run.sh** file and save it in the same folder than your **MainKratosCustom.py**. This file is in charge of running the simulation. **Please specify your** ***\<job-name\>*** **(it must start with a "G" followed by the number of your group, and preferably something below 8 characters total)**. You can also change the error (after -e) and output (after -o) file names, which will serve to output any errors that might happen during the simulation and the standard prompt output respectively. By last, write the command that you want to execute. In your case: 
