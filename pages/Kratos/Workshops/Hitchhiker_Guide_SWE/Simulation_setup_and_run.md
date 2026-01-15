@@ -478,6 +478,6 @@ $ qsub -pe impi_tight_fu <num-of-cores> -V q_run.sh
 $ tail -n <number-of-lines-to-print> <output-file-name>
 ```   
 
-When the simulation ends, you can then [copy the results back to your computer](#3-transfer-files), the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
+When the simulation ends, you can then copy the results back to your computer, the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
 
 
