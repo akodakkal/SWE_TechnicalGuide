@@ -5,7 +5,7 @@
 
 [2. Preprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Preprocessing.md)
 
-[3. Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Solving.md)
+[3. Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Simulation_setup_and_run.md)
 
 [4. Postprocessing](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Postprocessing.md)
 
