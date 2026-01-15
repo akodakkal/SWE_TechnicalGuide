@@ -415,7 +415,7 @@ First, here are some useful commands for the cluster:
 | qstat -f | Show the state of all the nodes in the computer, including where each job is running.| 
 -->
 
-We use the screen command to detach and re attch to a terminal session. 
+We use the screen command to detach and reattach to a terminal session. 
 You can use the following commands 
 - To create a screen 
 ```shell
@@ -440,6 +440,11 @@ Let us imagine, that you want to run a script (e.g. MainKratosCustom.py) located
 - Navigate to the folder where you have the script you want to run:
 ```shell
 $ cd <path-to-simulation-folder>
+```
+
+- Start Kratos environment
+```shell
+$ startkratos
 ```
 - Keep the number of OpenMP threads to 8
 ```shell
