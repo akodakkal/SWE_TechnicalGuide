@@ -363,7 +363,7 @@ ___
  
 You will need to initially be connected to the university network to find the computers. For that, use EduVPN.
 
-The Credentials for the CIP-Pool computer (normal computer) and the Cluster will be given during the course. You will need the following:
+The Credentials for the CIP-Pool computer <!(normal computer) and the Cluster> will be given during the course. You will need the following:
 
 - User name
 - IP-address
@@ -372,55 +372,84 @@ The Credentials for the CIP-Pool computer (normal computer) and the Cluster will
 The login is done directly through the "ssh" command in the Git Bash terminal:
 
 ```shell
-$ ssh -oHostKeyAlgorithms=+ssh-dss <user-name>@<IP-address>
+$ ssh <user-name>@<IP-address>
 ```
 
-**Note: Some operating systems might have problems connecting via ssh to the cluster, due to the old operating system at the cluster, that is why we use the parameter "-oHostKeyAlgorithms=+ssh-dss". If you face any error using this command try to substitute it for "-oHostKeyAlgorithms=+ssh-rsa"*
+<!--**Note: Some operating systems might have problems connecting via ssh to the cluster, due to the old operating system at the cluster, that is why we use the parameter "-oHostKeyAlgorithms=+ssh-dss". If you face any error using this command try to substitute it for "-oHostKeyAlgorithms=+ssh-rsa"*-->
 
 ___
 ### 3.3 Transfer files
   
-The file structure in the cluster is divided in the following folders:
+The file structure in the cluster is divided in the following folders:<!
 - Software:
   - Kratos &rarr; Folder where Kratos is compiled. **You should not touch it.**
-  - setup_kratos.sh &rarr; File to add Kratos to the path. **You should not touch it.**
+  - setup_kratos.sh &rarr; File to add Kratos to the path. **You should not touch it.**>
 - Documents:
   - Tests &rarr; Folder with some examples and tests.
-  - Templates &rarr; Here are saved some important files you will need to copy.
+    <!- Templates &rarr; Here are saved some important files you will need to copy.>
   - Group`<group-data>` &rarr; Multiple folders, each for one group. Here you can save all your documents and simulations.
   
 The next step is to transfer your simulation file to your group folder in the cluster. To transfer files from your personal computer to the remote computers (or the other way around) we use the secure copy ("scp") command:
   
 - To copy from your personal computer to the remote location, type in your terminal (mind the spaces):
   ```shell  
-  $ scp -r -oHostKeyAlgorithms=+ssh-dss <folder-to-copy> <user-name>@<IP-address>:<path>
+  $ scp -r <folder-to-copy> <user-name>@<IP-address>:<path>
   ```
-
+<!--
 - To copy from the statik computer to the remote location, type in your terminal:
   ```shell
   $ scp -r -oHostKeyAlgorithms=+ssh-dss <user-name>@<IP-address>:<path-folder-to-copy> <paste-destination>
   ```
-  
+  -->
 Remember to put the parameter `-r` so the folder and all the contents can be copied. If you only want a file, omit the parameter `-r`. 
 
 ___
-### 3.4 Running in the cluster
+### 3.4 Running in the remote computer
 
 First, here are some useful commands for the cluster:
-
+<!--
 | Command | Function | 
 | -------- | -------- |
 | qstat | Shows own submitted jobs. | 
 | qdel `<job-id>` | Cancel a job | 
 | qstat -f | Show the state of all the nodes in the computer, including where each job is running.| 
+-->
 
-Let us imagine, that you want to run a script (e.g. MainKratosCustom.py) located in a certain folder of the cluster. These would be the steps to launch the job with the qsub command:
+We use the screen command to detach and re attch to a terminal session. 
+You can use the following commands 
+- To create a screen 
+```shell
+$ screen -S <name_of_screen>
+```
+- To detach from a screen use Ctrl+A then D
 
-- Log in on the head of the Statik cluster (see instructions above).
+- To view all the screens that are active 
+```shell
+$ screen -ls
+```
+- To reattch to a screen 
+```shell
+$ screen -r <name_of_screen>
+```
+- To kill a screen type 'exit' inside the respective screen 
+
+
+Let us imagine, that you want to run a script (e.g. MainKratosCustom.py) located in a certain folder of the remote computer. These would be the steps to launch the job:
+
+- Log in on the respective remore computer (see instructions above).
 - Navigate to the folder where you have the script you want to run:
 ```shell
 $ cd <path-to-simulation-folder>
 ```
+- Keep the number of OpenMP threads to 8
+```shell
+$ export OMP_NUM_THREADS=8
+```
+- Run the simulation
+```shell
+$ python3 MainKratosCustom.py
+```
+<!--
 - Using the template you have in `../Documents/Templates/q_run.sh` create a **q_run.sh** file and save it in the same folder than your **MainKratosCustom.py**. This file is in charge of running the simulation. **Please specify your** ***\<job-name\>*** **(it must start with a "G" followed by the number of your group, and preferably something below 8 characters total)**. You can also change the error (after -e) and output (after -o) file names, which will serve to output any errors that might happen during the simulation and the standard prompt output respectively. By last, write the command that you want to execute. In your case: 
 ```shell
 $ mpirun -x LD_LIBRARY_PATH --bind-to core --map-by socket python3 MainKratosCustom.py
@@ -443,12 +472,12 @@ $ sh q_submit.sh
 ```shell
 $ qsub -pe impi_tight_fu <num-of-cores> -V q_run.sh
 ```
-
-- Check that the simulation is running with the **qstat** or **qstat -f** commands. If it is running, go to one of the output files and use the following command to visualize the last lines and check that they are being written:
+-->
+- If a simulation is running, go to one of the output files and use the following command to visualize the last lines and check that they are being written:
 ```shell
 $ tail -n <number-of-lines-to-print> <output-file-name>
 ```   
 
-When the simulation ends, the nodes should be liberated automatically. You can then [copy the results back to your computer](#3-transfer-files), the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
+When the simulation ends, you can then [copy the results back to your computer](#3-transfer-files), the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
 
 
