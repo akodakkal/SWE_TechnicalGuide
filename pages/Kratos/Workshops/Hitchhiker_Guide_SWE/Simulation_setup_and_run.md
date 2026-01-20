@@ -363,7 +363,7 @@ ___
  
 You will need to initially be connected to the university network to find the computers. For that, use EduVPN.
 
-The Credentials for the CIP-Pool computer <!(normal computer) and the Cluster> will be given during the course. You will need the following:
+The Credentials for the CIP-Pool computer <!-- (normal computer) and the Cluster --> will be given during the course. You will need the following:
 
 - User name
 - IP-address
@@ -383,10 +383,10 @@ ___
 The file structure in the cluster is divided in the following folders:<!
 - Software:
   - Kratos &rarr; Folder where Kratos is compiled. **You should not touch it.**
-  - setup_kratos.sh &rarr; File to add Kratos to the path. **You should not touch it.**>
+  - setup_kratos.sh &rarr; File to add Kratos to the path. **You should not touch it.**
 - Documents:
   - Tests &rarr; Folder with some examples and tests.
-    <!- Templates &rarr; Here are saved some important files you will need to copy.>
+  - Templates &rarr; Here are saved some important files you will need to copy.
   - Group`<group-data>` &rarr; Multiple folders, each for one group. Here you can save all your documents and simulations.
   
 The next step is to transfer your simulation file to your group folder in the cluster. To transfer files from your personal computer to the remote computers (or the other way around) we use the secure copy ("scp") command:
