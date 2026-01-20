@@ -436,7 +436,7 @@ $ screen -r <name_of_screen>
 
 Let us imagine, that you want to run a script (e.g. MainKratosCustom.py) located in a certain folder of the remote computer. These would be the steps to launch the job:
 
-- Log in on the respective remore computer (see instructions above).
+- Log in on the respective remote computer (see instructions above).
 - Navigate to the folder where you have the script you want to run:
 ```shell
 $ cd <path-to-simulation-folder>
