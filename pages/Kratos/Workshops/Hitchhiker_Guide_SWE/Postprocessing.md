@@ -43,7 +43,30 @@ $ convertH5toXdmf <name_of_files_until_dash>
 
 ## 2. Postprocessing in ParaView
 
-After the files are ready to be read in ParaView, here are some helpful commands when using the software:
+After the files are ready to be read in ParaView, here a brief overview of how to use ParaView is given as two parts. 
+
+1. User Interface of Paraview
+2. Useful tools and settings in Paraview
+
+### 2.1 User Interface of Paraview
+
+Refer to the figure and the numbered items (in clockwise direction)
+
+![GiD User Interface](../../../../images/WindEngineering/Paraview_User_Interface.png)
+
+2 - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files
+
+1 - The files that are currently visualised will have the eye icon enabled.
+
+8 - Layout selection. For each layout, multiple visualisation options are available, such as render view and spreadsheet. 
+
+5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process for the project parameters in Kratos, will be available. 
+
+6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like PRESSURE.
+
+9 - Select the time step that you want to visualise. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters will be results are written
+
+### 2.2 Useful tools and settings in Paraview
 
 
 1. **ParaView → Edit → Settings → General**, search for “Cache” and tick “Cache Geometry For Animation” to speed up picture creation for animation.

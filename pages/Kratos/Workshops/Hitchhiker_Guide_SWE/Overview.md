@@ -5,7 +5,7 @@
 
 [2. GiD Modelling](Preprocessing.md)
 
-[3. Solving](Solving.md)
+[3. Solving](Simulation_setup_and_run.md)
 
 [4. Postprocessing](Postprocessing.md)
 
