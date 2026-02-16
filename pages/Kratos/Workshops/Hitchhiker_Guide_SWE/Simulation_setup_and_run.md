@@ -1,3 +1,5 @@
+<!--
+
 # Simulation_setup_and_run
 This section provides the guidelines for solving a CFD prblem in KratosMultiphysics and is organized as follows.
 
@@ -485,4 +487,4 @@ $ tail -n <number-of-lines-to-print> <output-file-name>
 
 When the simulation ends, you can then copy the results back to your computer, the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
 
-
+-->
