@@ -71,8 +71,7 @@ Refer to the figure and the numbered items (in clockwise direction)
 
     5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process of the project parameters file in Kratos, shall be selected for visuvalization    
     6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like for PRESSURE     
-    4 - 
-      
+    4 - Item descriptions:
           1. Manual setting of the Visualization coloring scale. 
           2. Automatic recalculation of the Visualization coloring scale based on entire time step values.
           3. Automatic recalculation of the Visualization coloring scale based on present time step values.
