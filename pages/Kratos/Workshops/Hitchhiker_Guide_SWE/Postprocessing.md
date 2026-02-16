@@ -56,27 +56,29 @@ Refer to the figure and the numbered items (in clockwise direction)
 
 1. **File Handling**
 
-    2 - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files    
-    1 - The files that are currently visualized will have the eye icon enabled   
-    8 - Layout selection. For each layout, multiple visualization options are available, such as render view and spreadsheet  
+    2  - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files    
+    1  - The files that are currently visualized will have the eye icon enabled   
+    8  - Layout selection. For each layout, multiple visualization options are available, such as render view and spreadsheet  
     12 - Multiple adjacent screens for viewing models   
 
 2. **Viewing tools**
 
     11 - Predefined visual orientation options  
-    7 - Different model rendering options like surface, surface with edges, etc. Here Surface LIC will be usefull rendering. Apply it on sliced surfaces for smoother handling.      
+    7  - Different model rendering options like surface, surface with edges, etc. Here Surface LIC will be usefull rendering. Apply it on sliced surfaces for smoother handling.      
     10 - Select Hover Points/Shells and Hover over model to see the elemental or nodal values like Velocity or Pressure    
 
 3. **Visualization Variables**
 
-    5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process of the project parameters file in Kratos, shall be selected for visuvalization    
-    6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like for PRESSURE     
-    4 - 1. Manual setting of the Visualization coloring scale.   
+    5  - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process of the project parameters file in Kratos, shall be selected for visuvalization    
+    6  - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like for PRESSURE     
+    4  - 1. Manual setting of the Visualization coloring scale.   
 &nbsp;&nbsp;&nbsp; - 2. Automatic recalculation of the Visualization coloring scale based on entire time step values.   
 &nbsp;&nbsp;&nbsp; - 3. Automatic recalculation of the Visualization coloring scale based on present time step values.   
-    9 - Select the time step that you want to visualize. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters, results will be written  
+    9  - Select the time step that you want to visualize. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters, results will be written  
 
-    3 - In filters, multiple Visualization tools can be selected. Useful tools are explained in next section     
+4. **Useful Tools**
+
+    3  - In filters, multiple Visualization tools can be selected. Useful tools are explained in next section     
     13 - For each tool, a separate properties box will be created where you can alter visualizing options      
     14 - Opacity is an important property to adjust for the main file properties where you can use it for a 3D volume to visualize inner objects     
 
@@ -89,7 +91,7 @@ Refer to the figure and the numbered items (in clockwise direction)
   - Using save animation will create standalone JPG or PNG pictures for the results above.
   - Merge pictures into: GIF with the software of your choice **or/also** any video format with the software of your choice.
 
-3. **FIltering Tools:**
+3. **Filtering Tools:**
 Go to ParaView → Filters → Alphabetical, you would see a filters similar to figure below. Select the necessary filter (In this figure useful filtering tools are marked). The filter will appear in the pipeline browser with its properties below it. 
 
 ![Paraview_Filtering_Tools](../../../../images/WindEngineering/Paraview_Filtering_Tools.png)
