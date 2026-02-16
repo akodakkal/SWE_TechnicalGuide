@@ -1,3 +1,5 @@
+<!--
+
 # Remote Computing
 Before continuing further with the remote computing, make sure the following has been done:
 - Have the necessary tools for Remote Computing installed ([eduVPN](https://github.com/akodakkal/SWE_TechnicalGuide/blob/main/pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Remote_Computing.md#vpn) and [Git Bash](https://github.com/akodakkal/SWE_TechnicalGuide/blob/main/pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Remote_Computing.md#secure-shell-ssh-client)).
@@ -121,4 +123,6 @@ $ tail -n <number-of-lines-to-print> <output-file-name>
 
 When the simulation ends, the nodes should be liberated automatically. You can then [copy the results back to your computer](#3-transfer-files), the same way you copied the results from your computer to the cluster, just the other way around. The next step is the [postprocessing of the simulation results](Postprocessing.md).
 
+
+-->
 
