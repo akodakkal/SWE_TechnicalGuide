@@ -43,7 +43,7 @@ $ convertH5toXdmf <name_of_files_until_dash>
 
 ## 2. Postprocessing in ParaView
 
-After the files are ready to be read in ParaView, here a brief overview of how to use ParaView is given as two parts. 
+Once the files are ready to be read in ParaView, refer to this chapter to have a brief overview on how to use ParaView. It is divided into two parts, 
 
 1. User Interface of Paraview
 2. Useful tools and settings in Paraview
