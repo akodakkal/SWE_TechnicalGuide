@@ -12,15 +12,15 @@ ___
 
 ### 1.1 Including Cp values to the h5 files
 
-The output results from Kratos will be in format .h5. This result will not inbuilt contain coeffcient of pressure values. So we should add it to visuvalise it in ParaView. To do that,
+The output results from Kratos will be in format .h5. This result does not contain coefficient of pressure values by default. So we should add it to visualize it in ParaView. To do that,
 
-1. Add the script "add_cp_to_h5.py" to the directory "results" in your project. This file shall be found in the sample files we provided you. Take a look at the script, you should modify some values according with your simulation parameters.
+1. Add the script "add_cp_to_h5.py" to the directory "results" in your project. This file shall be found in the sample files we provided you. Take a look at the script, you should modify some values according to your simulation parameters.
 
 2. Load the default Kratos version at the cluster:
 ```shell
 $ startkratos
 ```
-3. Run the follwing
+3. Run the following
 ```shell
 $ python3 add_cp_to_h5.py
 ```
@@ -39,7 +39,7 @@ $ convertH5toXdmf <name_of_files_until_dash>
 ```
 3. An ".xdmf" file will be created. Copy all the h5 files and the xdmf file to your computer to visualize. 
 
-**Note that the xdmf file only serves as a link between the ParaView and the h5 files. ParaView need both the h5 and xdmf files.* 
+**Note that the xdmf file only serves as a link between the ParaView and the h5 files. ParaView needs both the h5 and xdmf files.* 
 
 ## 2. Postprocessing in ParaView
 
@@ -54,17 +54,41 @@ Refer to the figure and the numbered items (in clockwise direction)
 
 ![GiD User Interface](../../../../images/WindEngineering/Paraview_User_Interface.png)
 
-2 - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files
+#### File Handling
 
-1 - The files that are currently visualised will have the eye icon enabled.
+  2 - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files
 
-8 - Layout selection. For each layout, multiple visualisation options are available, such as render view and spreadsheet. 
+  1 - The files that are currently visualized will have the eye icon enabled.
 
-5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process for the project parameters in Kratos, will be available. 
+  8 - Layout selection. For each layout, multiple visualization options are available, such as render view and spreadsheet. 
 
-6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like PRESSURE.
+  12 - Multiple adjacent screens for viewing models
 
-9 - Select the time step that you want to visualise. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters will be results are written
+#### Viewing tools
+
+  11 - Predefined visual orientation options
+
+  7 - Different model rendering options like surface, surface with edges, etc. 
+
+  10 - Select Hover Points/Shells and Hover over model to see the elemental or nodal values like Velocity or Pressure
+
+#### Visualization Variables
+
+  5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process for the project parameters in Kratos, will be available. 
+
+  6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like PRESSURE.
+
+  4 - 1. Manual setting of the Visualization coloring scale. 
+      2. Automatic recalculation of the Visualization coloring scale based on entire time step values.
+      3. Automatic recalculation of the Visualization coloring scale based on present time step values. 
+
+  9 - Select the time step that you want to visualize. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters, results will be written
+
+  3 - In filters, multiple Visualization tools can be selected. Important tools are explained in next section
+
+  13 - For each tool, a separate properties box will be created where we can alter visualizing options
+
+  14 - Opacity is an important property to adjust for the main file properties where you can set the Opacity of 3D volume to visualize inner objects
 
 ### 2.2 Useful tools and settings in Paraview
 
@@ -87,7 +111,7 @@ Refer to the figure and the numbered items (in clockwise direction)
 ____
 ## 3. Postprocessing with python
 
-The ["point_output_process"](Preprocessing.md#21-point-output-process) and ["line_output_process"](Preprocessing.md#22-line-output-process) that you have defined in ProjectParametersCustom.json generates an ascii output (.dat files), with time series of respective pressure and velocities. We recommend (and support) you to create your own pythons scripts with numpy and matplotlib to visualize the data. Here's an example of a python script to generate a simple plot of the pressure of a certain point:
+The ["point_output_process"](Preprocessing.md#21-point-output-process) and ["line_output_process"](Preprocessing.md#22-line-output-process) that you have defined in ProjectParametersCustom.json generates an ascii output (.dat files), with time series of respective pressure and velocities. We recommend (and support) you to create your own python scripts with numpy and matplotlib to visualize the data. Here's an example of a python script to generate a simple plot of the pressure of a certain point:
 
 ```python
 import numpy as np
