@@ -69,7 +69,7 @@ Boundary Conditions:
 
 ### 2.4 Assign project parameters
 
-Set the problem type by navigating to Data → Problem Type → Kratos → Fluid → Fluid → 3D. Then a panel on the left side will appear where we will assign the project parameters for the problem. Since GiD offers limited user control over project parameters, only the essential parameters will be set within the GiD interface. Additional project parameter configurations will be handled outside GiD, which will be explained in [Solving](Solving.md) 
+Set the problem type by navigating to Data → Problem Type → Kratos → Fluid → Fluid → 3D. Then a panel on the left side will appear where we will assign the project parameters for the problem. Since GiD offers limited user control over project parameters, only the essential parameters will be set within the GiD interface. Additional project parameter configurations will be handled outside GiD, which will be explained in [Simulation setup and run](Simulation_setup_and_run.md) 
 
 For the essential parameters, set the analysis type and all other parameters as shown in the tutorial video, except for the following:
 
@@ -163,5 +163,5 @@ Although the problem can be directly solved by Kratos in GiD, the main reason fo
 1. As the simulations demand significant computational power, a remote connection to the cluster of the Chair of Structural Analysis is provided where the simulations are executed.
 2. GiD provides limited user control over modeling options and output parameter settings when compared to directly working with the ProjectParameter file. 
 
-The changes that need to be carried out in ProjectParameter.json and how to run the simulation in the cluster are explained on the next page [Solving](Solving.md). 
+The changes that need to be carried out in ProjectParameter.json and how to run the simulation in the cluster are explained on the next page [Simulation setup and run](Simulation_setup_and_run.md). 
 

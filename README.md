@@ -17,7 +17,7 @@
 The Hitchhiker's Guide provides a valuable resource for student groups involved in the Structural Wind Engineering (SWE) project, assisting them with the technical aspects of the project. The guide is organized in a mostly chronological order, following the project steps. It is recommended to begin by reviewing the Installation Guides to ensure all necessary tools for the project are set up. Since wind engineering is a multiphysics problem, the computational analysis of a building subjected to wind load primarily involves Computational Fluid Dynamics (CFD) and Computational Structural Dynamics (CSD). As this project work focuses on one-way coupling, we perform CFD follwed by CSD. Genrally, a computational simulation consists of three main stages:
 
 1. Preprocessing
-2. Solving
+2. Simulation setup and run
 3. Postprocessing
 
 These steps will be carried out both for CFD and CSD. 
@@ -30,7 +30,7 @@ Preprocessing involves preparing the input data required for the simulation. For
 
 ## 2. Simulation setup and run
 
-KratosMultiphysics an open-source multiphysics software developed by CIMNE (International Center for Numerical Methods in Engineering) will be used as solver. Kratos has several applications such as Fluid Dynamics, Structural Mechanics, and Optimization. In this project, the Fluid Mechanics Application of Kratos will be used for CFD simulations - [KratosMultiphysics Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Kratos_with_Python.md). For more information about Kratos and its use cases - [Kratos Documentation](https://kratosmultiphysics.github.io/Kratos/). Solver information for Kratos relating to this project is explained in [Solving](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Solving.md)
+KratosMultiphysics an open-source multiphysics software developed by CIMNE (International Center for Numerical Methods in Engineering) will be used as solver. Kratos has several applications such as Fluid Dynamics, Structural Mechanics, and Optimization. In this project, the Fluid Mechanics Application of Kratos will be used for CFD simulations - [KratosMultiphysics Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/Kratos_with_Python.md). For more information about Kratos and its use cases - [Kratos Documentation](https://kratosmultiphysics.github.io/Kratos/). Solver information for Kratos relating to this project is explained in [Simulation setup and run](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Simulation_setup_and_run.md)
 
 ## 3. Postprocessing
 
@@ -42,7 +42,7 @@ Postprocessing involves visualizing and interpreting the numerical results obtai
 
 The results from Fluid solver(Kratos) will be processed with python and given as input to CSD Solver. 
 
-## 2. Solving
+## 2. Simulation setup and run
 
 ParOptBeam (Parametrical Optimizable Beam) is a program from the Chair of Structural Analysis will be used as CSD solver. Using this program, the user can run eigenvalue, static and dynamic analysis of a finite element (FE) beam model. - [ParOptBeam Installation Guides](pages/Kratos/Workshops/Hitchhiker_Guide_SWE/Installation%20Guides/ParOptBeam.md)
 

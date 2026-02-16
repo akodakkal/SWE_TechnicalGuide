@@ -5,7 +5,7 @@
 
 [2. GiD Modelling](Preprocessing.md)
 
-[3. Solving](Simulation_setup_and_run.md)
+[3. Simulation setup and run](Simulation_setup_and_run.md)
 
 [4. Postprocessing](Postprocessing.md)
 
@@ -17,14 +17,14 @@
 The Hitchhiker's Guide provides a valuable resource for student groups involved in the Structural Wind Engineering (SWE) project, assisting them with the technical aspects of the project. The guide is organized in a mostly chronological order, following the project steps. It is recommended to begin by reviewing the Installation Guides to ensure all necessary tools for the project are set up. Computational modelling generally consists of three main stages:
 
 1. CAD Modelling and Mesh Generation 
-2. Solving
+2. Simulation setup and run
 3. Postprocessing
 
 # 1. CAD Modelling and Mesh Generation
 
 In this project, GiD will be used for CAD modelling and mesh generation. GiD is a licensed software that will be provided during the course. [Installation Guides](Installation%20Guides/GiD.md)
 
-# 2. Solving
+# 2. Simulation setup and run
 
 Since wind engineering is a multiphysics problem, the computational analysis of a building subjected to wind primarily involves Computational Fluid Dynamics (CFD) and Computational Structural Dynamics (CSD). As this project work focuses on one-way coupling, seperate solvers for Fluid and Structural problem are used.
 
