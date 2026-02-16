@@ -54,20 +54,20 @@ Refer to the figure and the numbered items (in clockwise direction)
 
 ![GiD User Interface](../../../../images/WindEngineering/Paraview_User_Interface.png)
 
-#### 1 .File Handling
+1. **File Handling**
 
     2 - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files    
     1 - The files that are currently visualized will have the eye icon enabled   
     8 - Layout selection. For each layout, multiple visualization options are available, such as render view and spreadsheet  
     12 - Multiple adjacent screens for viewing models   
 
-#### 2. Viewing tools
+2. **Viewing tools**
 
     11 - Predefined visual orientation options  
     7 - Different model rendering options like surface, surface with edges, etc  
     10 - Select Hover Points/Shells and Hover over model to see the elemental or nodal values like Velocity or Pressure    
 
-#### 3. Visualization Variables
+3. **Visualization Variables**
 
     5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process for the project parameters in Kratos, will be available    
     6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like PRESSURE     
