@@ -56,69 +56,69 @@ Refer to the figure and the numbered items (in clockwise direction)
 
 1. **File Handling**
 
-    2  - It shows the files you have opened and also downstream pipelines (will be explained later). This means we can load multiple files    
+    2  - This is pipeline browser which displays the files you have opened and their downstream pipelines (will be explained later)         
     1  - The files that are currently visualized will have the eye icon enabled   
-    8  - Layout selection. For each layout, multiple visualization options are available, such as render view and spreadsheet  
-    12 - Multiple adjacent screens for viewing models   
+    8  - Layout management and creation. Here Multiple layouts shall be managed. New layouts are created on clicking the '+' icon. While creating new layouts, multiple options are available, such as render view and spreadsheet (will display nodal and elemental variables in spreadsheet form)     
+    12 - Using this you can open multiple adjacent screens for viewing models   
 
-2. **Viewing tools**
+2. **Viewing Tools**
 
-    11 - Predefined visual orientation options  
-    7  - Different model rendering options like surface, surface with edges, etc. Here Surface LIC will be usefull rendering. Apply it on sliced surfaces for smoother handling.      
-    10 - Select Hover Points/Shells and Hover over model to see the elemental or nodal values like Velocity or Pressure    
+    11 - Here, predefined visual orientation options shall be selected      
+    7  - Here, different model rendering options like surface, surface with edges, etc shall be selected. In this, Surface LIC will be useful rendering. Apply it on sliced surfaces for smoother handling.      
+    10 - Select this Hover Points/Shells and Hover over model to see the elemental or nodal values like Velocity or Pressure    
 
 3. **Visualization Variables**
 
-    5  - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process of the project parameters file in Kratos, shall be selected for visuvalization    
-    6  - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like for PRESSURE     
-    4  - 1. Manual setting of the Visualization coloring scale.   
-&nbsp;&nbsp;&nbsp; - 2. Automatic recalculation of the Visualization coloring scale based on entire time step values.   
-&nbsp;&nbsp;&nbsp; - 3. Automatic recalculation of the Visualization coloring scale based on present time step values.   
-    9  - Select the time step that you want to visualize. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters, results will be written  
+    5  - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process of the project parameters file in Kratos, shall be selected here for visualization     
+    6  - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be enabled, like for PRESSURE     
+    4  - 1. Manual modification to the visualization coloring scale     
+&nbsp;&nbsp;&nbsp; - 2. Automatic recalculation of the visualization coloring scale based on entire time step values     
+&nbsp;&nbsp;&nbsp; - 3. Automatic recalculation of the visualization coloring scale based on present time step values      
+    9  - Select the time step that you want to visualize   
 
-4. **Useful Tools**
+4. **Other Useful Tools**
 
-    3  - In filters, multiple Visualization tools can be selected. Useful tools are explained in next section     
-    13 - For each tool, a separate properties box will be created where you can alter visualizing options      
-    14 - Opacity is an important property to adjust for the main file properties where you can use it for a 3D volume to visualize inner objects     
+    3  - In filters, multiple visualization tools can be selected. Useful tools are explained in next section     
+    14 - For each tool, a separate properties panel will be created where you can alter visualizing options      
+    13 - Opacity is an important property to adjust for the 3D fluid domain where you can adjust it to visualize inner objects     
 
-### 2.2 Useful tools and settings in Paraview
+### 2.2 Useful filtering tools and settings in Paraview
 
 
 1. **ParaView → Edit → Settings → General**, search for “Cache” and tick “Cache Geometry For Animation” to speed up picture creation for animation.
 
 2. **Animations:**
-  - Using save animation will create standalone JPG or PNG pictures for the results above.
+  - Using File → Save animation, you can create standalone JPG or PNG pictures for the results above.
   - Merge pictures into: GIF with the software of your choice **or/also** any video format with the software of your choice.
 
 3. **Filtering Tools:**
-Go to ParaView → Filters → Alphabetical, you would see a filters similar to figure below. Select the necessary filter (In this figure useful filtering tools are marked). The filter will appear in the pipeline browser with its properties below it. 
+Go to ParaView → Filters → Alphabetical, you would see the filters similar to figure below. Select the necessary filter (In this figure useful filtering tools are marked), which will appear in the downstream pipeline. Each filter will have a seperate properties panel which can been seen below pipeline browser. 
 
 ![Paraview_Filtering_Tools](../../../../images/WindEngineering/Paraview_Filtering_Tools.png)
 
 - **3.1 Slice & Clip:**  
     - This shall used in cases to slice out a specific part of the fluid domain   
-    - In the properties,  
+    - In the properties panel,  
     -- Mention Slice type - Plane, box, etc   
     -- Set the dimensions of Plane/Box   
-    -- Select/Unselect the Show Plane and  
-    - Slice & Clip are sligtly different, which you would notice the difference when using it  
+    -- Select/Unselect the Show Plane     
+    - Slice & Clip are slightly different, which you would notice the difference when using it  
     
 - **3.2 Glyph:**
-    - Glyph is a form of Vector Visuvalisation  
-    - In the properties, modify the varibale and scale factor as needed  
+    - Glyph is a form of vector visuvalisation  
+    - In the properties panel, modify the variable and scale factor as needed  
   
 - **3.3 Stream Tracer:**
     - Stream Tracer is used to generate streamlines of the flow  
-    - In the properties, important parameters to set are  Line Parameters(Stream lines will be generated across it), Maximum Streamline length and Resolution  
+    - In the properties panel, important parameters to set are  line parameters (Stream lines will be generated across this line), maximum streamline length and resolution  
     
 - **3.4 Plot Over Line:**
-    - Plots a selected variable across the space (Line Parameters given in properties)  
+    - Use this to Plot a variable like VELOCITY, over a line in the 3D Fluid Domain (Specify the line parameters in the properties panel)  
 
 - **3.5 Contour:**
     - Creates contour of selected variable
 - **3.6 Gradient:**
-    - Caluclates gradient, Q Criterion. This is used for visuvalising vortexes. This can be visuvalised with Contour. 
+    - This calculates gradient, Q Criterion (it is used for visualizing vortexes). The calulated parameters can be visuvalised by creating a downstream filter with Contour. In the contour properties panel, set Q-values range of 0.2 - 0.01 1/s. [Reference link](https://discourse.paraview.org/t/qcriterion-in-paraview/2355)
 
 4. **Notes**
   - For Pressure in Structural model part, same principles regarding creating slices and visualization as with the velocity     
