@@ -52,7 +52,7 @@ After the files are ready to be read in ParaView, here a brief overview of how t
 
 Refer to the figure and the numbered items (in clockwise direction)
 
-![GiD User Interface](../../../../images/WindEngineering/Paraview_User_Interface.png)
+![Paraview_User_Interface](../../../../images/WindEngineering/Paraview_User_Interface.png)
 
 1. **File Handling**
 
@@ -64,19 +64,19 @@ Refer to the figure and the numbered items (in clockwise direction)
 2. **Viewing tools**
 
     11 - Predefined visual orientation options  
-    7 - Different model rendering options like surface, surface with edges, etc  
+    7 - Different model rendering options like surface, surface with edges, etc. Here Surface LIC will be usefull rendering. Apply it on sliced surfaces for smoother handling.      
     10 - Select Hover Points/Shells and Hover over model to see the elemental or nodal values like Velocity or Pressure    
 
 3. **Visualization Variables**
 
     5 - Variables such as PRESSURE, VELOCITY, and others, which you have defined in the output process of the project parameters file in Kratos, shall be selected for visuvalization    
     6 - Specify the direction of a vector variable. If the selected variable is not a vector, then the option will not be available, like for PRESSURE     
-    4 - 1\. Manual setting of the Visualization coloring scale. 
-        2\. Automatic recalculation of the Visualization coloring scale based on entire time step values.
-        3\. Automatic recalculation of the Visualization coloring scale based on present time step values.
+    4 - 1. Manual setting of the Visualization coloring scale.   
+&nbsp;&nbsp;&nbsp; - 2. Automatic recalculation of the Visualization coloring scale based on entire time step values.   
+&nbsp;&nbsp;&nbsp; - 3. Automatic recalculation of the Visualization coloring scale based on present time step values.   
     9 - Select the time step that you want to visualize. Here, also note that although the simulation ran for many steps, only for the time step that you have specified in the project parameters, results will be written  
 
-    3 - In filters, multiple Visualization tools can be selected. Important tools are explained in next section     
+    3 - In filters, multiple Visualization tools can be selected. Useful tools are explained in next section     
     13 - For each tool, a separate properties box will be created where you can alter visualizing options      
     14 - Opacity is an important property to adjust for the main file properties where you can use it for a 3D volume to visualize inner objects     
 
@@ -85,18 +85,43 @@ Refer to the figure and the numbered items (in clockwise direction)
 
 1. **ParaView → Edit → Settings → General**, search for “Cache” and tick “Cache Geometry For Animation” to speed up picture creation for animation.
 
-2. **Import flow domain**: Velocity in model part “FluidModelPart.fluid_computational_model_part”:
-  - Create **slices** &rarr; define a plane by its origin (coordinates) and the normal (coordinates or select normal).
-  - Use **stream tracer** to visualize velocity (one of the symbols above the pipeline browser).
-  - **Set opacity of the flow domain** so that slices, stream tracer and structure can be seen. Adjust lighting according to preference.
-  - Vorticity visualization using the **Q-criterion** (later use iso-surface for Q-values in range of 0.2 - 0.01 1/s): follow [this link](https://discourse.paraview.org/t/qcriterion-in-paraview/2355) for a guide in using Q-criterion in ParaView.
-
-3. **Import pressure on Structure**: Pressure in model part  “FluidModelPart.NoSlip3D_structure” (or similar ModelPart name instead of structure):
-  -  Same principles regarding creating slices and visualization as with the velocity.
-
-4. **Animations:**
+2. **Animations:**
   - Using save animation will create standalone JPG or PNG pictures for the results above.
   - Merge pictures into: GIF with the software of your choice **or/also** any video format with the software of your choice.
+
+3. **FIltering Tools:**
+Go to ParaView → Filters → Alphabetical, you would see a filters similar to figure below. Select the necessary filter (In this figure useful filtering tools are marked). The filter will appear in the pipeline browser with its properties below it. 
+
+![Paraview_Filtering_Tools](../../../../images/WindEngineering/Paraview_Filtering_Tools.png)
+
+- **3.1 Slice & Clip:**  
+    - This shall used in cases to slice out a specific part of the fluid domain   
+    - In the properties,  
+    -- Mention Slice type - Plane, box, etc   
+    -- Set the dimensions of Plane/Box   
+    -- Select/Unselect the Show Plane and  
+    - Slice & Clip are sligtly different, which you would notice the difference when using it  
+    
+- **3.2 Glyph:**
+    - Glyph is a form of Vector Visuvalisation  
+    - In the properties, modify the varibale and scale factor as needed  
+  
+- **3.3 Stream Tracer:**
+    - Stream Tracer is used to generate streamlines of the flow  
+    - In the properties, important parameters to set are  Line Parameters(Stream lines will be generated across it), Maximum Streamline length and Resolution  
+    
+- **3.4 Plot Over Line:**
+    - Plots a selected variable across the space (Line Parameters given in properties)  
+
+- **3.5 Contour:**
+    - Creates contour of selected variable
+- **3.6 Gradient:**
+    - Caluclates gradient, Q Criterion. This is used for visuvalising vortexes. This can be visuvalised with Contour. 
+
+4. **Notes**
+  - For Pressure in Structural model part, same principles regarding creating slices and visualization as with the velocity     
+  - Use a combination of filters like Slice + Glyph, etc., for more informative and smoother visualizations  
+
 
 ____
 ## 3. Postprocessing with python
